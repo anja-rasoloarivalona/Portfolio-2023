@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Content, Video, Text } from './LandingPageForeground-styles';
-import video from '../../../assets/background.mp4';
 import { useWindowSize } from 'usehooks-ts';
+import { Wrapper, Container, Video, Content, ContentText } from './LandingPageForeground-styles';
+import video from '../../../assets/background.mp4';
+import { ThreeDButton } from '../../../components';
 
 type LandingPageForegroundProps = {
     text: string;
@@ -17,7 +18,7 @@ const LandingPageForeground = ({ text }: LandingPageForegroundProps) => {
 
     useEffect(() => {
         if (isInitialized === false && windowSize.width > 0 && windowSize.height > 0) {
-            setPosition({ x: 200, y: (windowSize.height - SIZE) / 2 });
+            setPosition({ x: 155, y: (windowSize.height - SIZE) / 2 });
             setIsInitialized(true);
         }
     }, [windowSize]);
@@ -43,18 +44,21 @@ const LandingPageForeground = ({ text }: LandingPageForegroundProps) => {
     }
 
     return (
-        <Container
+        <Wrapper
             className="container"
             position={position}
             onMouseDown={() => setMouseEnabled((prev) => !prev)}
         >
-            <Content className="content" position={position}>
+            <Container className="content" position={position}>
                 <Video autoPlay loop muted width="100%" height="auto">
                     <source src={video} type="video/mp4" />
                 </Video>
-                <Text>{text}</Text>
-            </Content>
-        </Container>
+                <Content>
+                    <ContentText>{text}</ContentText>
+                    <ThreeDButton>Let's begin</ThreeDButton>
+                </Content>
+            </Container>
+        </Wrapper>
     );
 };
 
