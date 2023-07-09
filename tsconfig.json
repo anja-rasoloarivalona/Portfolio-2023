@@ -1,4 +1,8 @@
 {
+    "include": [
+        "src/**/*", // *** The files TypeScript should type check ***,
+        "src/types/global.d.ts"
+    ],
     "compilerOptions": {
         "target": "ESNext", // Specify ECMAScript target version
         "lib": ["dom", "dom.iterable", "esnext"], // List of library files to be included in the compilation
@@ -21,8 +25,5 @@
         "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
         "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
     },
-    "include": [
-        "src/**/*" // *** The files TypeScript should type check ***
-    ],
     "exclude": ["node_modules", "build"] // *** The files to not type check ***
 }

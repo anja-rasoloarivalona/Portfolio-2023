@@ -543,6 +543,18 @@ module.exports = function (webpackEnv) {
                 'sass-loader'
               ),
             },
+            {
+              test: /\.tsx?$/,
+              use: 'ts-loader',
+              exclude: /node_modules/,
+            },
+            {
+              test: /\.mp4$/,
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+              },
+            },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.
