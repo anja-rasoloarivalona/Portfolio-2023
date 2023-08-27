@@ -1,7 +1,9 @@
 export const colors = {
     primary: {
-        main: '#ff90f0',
-        dark: '#ee8de1',
+        main: '#c995e2',
+        mainHover: '#32142e',
+        dark: '#aa37e2',
+        darkHover: '#e9e3e8',
     },
     background: '#121212',
     onBackground: '#c6c6c6',

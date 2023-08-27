@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentTextStyles, contentStyles, loadStylesAnimation } from '../LandingPage-styles';
+import { contentTextStyles, contentStyles, loadStylesAnimation } from '../Landing-styles';
 
 export const Wrapper = styled.div<{ position: { x: number; y: number } }>`
     position: fixed;

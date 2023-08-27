@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useWindowSize } from 'usehooks-ts';
-import { Wrapper, Container, Video, Content, ContentText } from './LandingPageForeground-styles';
+import { Wrapper, Container, Video, Content, ContentText } from './LandingForeground-styles';
 import video from '../../../assets/background.mp4';
-import { ThreeDButton } from '../../../components';
+import { OutlinedButton, ThreeDButton } from '../../../components';
 
 type LandingPageForegroundProps = {
     text: string;
@@ -10,7 +10,7 @@ type LandingPageForegroundProps = {
 
 const SIZE = 600;
 
-const LandingPageForeground = ({ text }: LandingPageForegroundProps) => {
+const LandingForeground = ({ text }: LandingPageForegroundProps) => {
     const windowSize = useWindowSize();
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [mouseEnabled, setMouseEnabled] = useState(false);
@@ -55,11 +55,11 @@ const LandingPageForeground = ({ text }: LandingPageForegroundProps) => {
                 </Video>
                 <Content>
                     <ContentText>{text}</ContentText>
-                    <ThreeDButton>Let's begin</ThreeDButton>
+                    <OutlinedButton>Let's begin</OutlinedButton>
                 </Content>
             </Container>
         </Wrapper>
     );
 };
 
-export default LandingPageForeground;
+export default LandingForeground;

@@ -6,15 +6,15 @@ import {
     AnimatedText,
     Content,
     ContentText,
-} from './LandingPageBackground-styles';
-import { ThreeDButton } from '../../../components';
+} from './LandingBackground-styles';
+import { OutlinedButton } from '../../../components';
 import video from '../../../assets/background.mp4';
 
 type LandingPageBackgroundProps = {
     text: string;
 };
 
-const LandingPageBackground = ({ text }: LandingPageBackgroundProps) => {
+const LandingBackground = ({ text }: LandingPageBackgroundProps) => {
     return (
         <Container>
             <Video autoPlay loop muted width="100%" height="auto">
@@ -24,15 +24,15 @@ const LandingPageBackground = ({ text }: LandingPageBackgroundProps) => {
 
             <AnimatedTextContainer>
                 <AnimatedText>{text}</AnimatedText>
-                <ThreeDButton>Let's begin</ThreeDButton>
+                <OutlinedButton hasDarkBackground={false}>Let's begin</OutlinedButton>
             </AnimatedTextContainer>
 
             <Content>
                 <ContentText>{text}</ContentText>
-                <ThreeDButton>Let's begin</ThreeDButton>
+                <OutlinedButton hasDarkBackground={false}>Let's begin</OutlinedButton>
             </Content>
         </Container>
     );
 };
 
-export default LandingPageBackground;
+export default LandingBackground;

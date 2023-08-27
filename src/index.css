@@ -34,6 +34,18 @@ html {
     }
 }
 
+body {
+    /* Hide scrollbar for Chrome, Safari, and newer Edge */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and older Edge */
+}
+
+/* WebKit-based browsers */
+body::-webkit-scrollbar {
+    width: 0; /* This effectively hides the scrollbar */
+    background: transparent; /* Optional: Set the background color of the track */
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

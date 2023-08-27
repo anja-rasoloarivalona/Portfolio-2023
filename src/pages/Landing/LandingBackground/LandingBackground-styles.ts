@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { contentTextStyles, contentStyles } from '../LandingPage-styles';
+import { contentTextStyles, contentStyles } from '../Landing-styles';
 
 export const Container = styled.div`
     position: absolute;
