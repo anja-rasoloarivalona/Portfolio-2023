@@ -38,9 +38,18 @@ export const Container = styled.button<OutlinedButtonProps>`
             };
         }
     }}
+
+    ${({ isExpanded }) => {
+        if (isExpanded === true) {
+            return {
+                width: '100%',
+                height: '4.5rem',
+            };
+        }
+    }}
 `;
 
-export const IconContainer = styled.div`
+export const TrailingIconContainer = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
@@ -56,8 +65,15 @@ export const IconContainer = styled.div`
     }
 `;
 
-export const IconBar = styled.div`
+export const TrailingIconBar = styled.div`
     width: 3rem;
     height: 1px;
     background: ${({ theme }) => theme.colors.primary.main};
+`;
+
+export const LeadingIconContainer = styled.div`
+    margin-right: ${({ theme }) => theme.box.spacing.md};
+    svg {
+        transform: translateY(1px);
+    }
 `;

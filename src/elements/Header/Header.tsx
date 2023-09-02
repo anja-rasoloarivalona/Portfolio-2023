@@ -1,19 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Content } from './Header-styles';
+import React, { useContext, useEffect } from 'react';
+import { AppContext } from '../../App';
+
+// styles and components
+import { Container, Content, Cta } from './Header-styles';
 import { Logo } from '../../components';
-import { HeaderMenuIcon } from './components';
-import HeaderMenu from './components/HeaderMenu/HeaderMenu';
+import { HeaderMenuIcon, HeaderMenu, HeaderForm } from './components';
+
+// hooks
 import { useScrollPosition } from '../../hooks';
 import { useWindowSize } from 'usehooks-ts';
+import { useLocation } from 'react-router-dom';
+
+// types
+import { MenuList } from '../../types';
 
 type HeaderProps = {
     isMainHeader?: boolean;
 };
 
 const Header = ({ isMainHeader = true }: HeaderProps) => {
-    const [isToggled, setIsToggled] = useState(false);
     const scrollPosition = useScrollPosition();
     const windowSize = useWindowSize();
+    const { pathname } = useLocation();
+    const { openedMenu } = useContext(AppContext);
 
     useEffect(() => {
         // Function to disable body scroll
@@ -21,7 +30,7 @@ const Header = ({ isMainHeader = true }: HeaderProps) => {
             e.preventDefault();
         };
 
-        if (isToggled) {
+        if (openedMenu != null) {
             // Add event listeners when menu is toggled
             document.body.addEventListener('touchmove', disableScroll, { passive: false });
             document.body.addEventListener('wheel', disableScroll, { passive: false });
@@ -36,24 +45,28 @@ const Header = ({ isMainHeader = true }: HeaderProps) => {
             document.body.removeEventListener('touchmove', disableScroll);
             document.body.removeEventListener('wheel', disableScroll);
         };
-    }, [isToggled]);
+    }, [openedMenu]);
 
     return (
         <Container
             id="app-header"
-            scrollPosition={scrollPosition}
             isMainHeader={isMainHeader}
-            windowHeight={windowSize.height}
+            isDisplayed={pathname !== '/' || openedMenu != null || scrollPosition >= windowSize.height}
+            useBackground={isMainHeader === true && pathname !== '/' && openedMenu == null}
+            disabledTransition={
+                isMainHeader === true && pathname === '/' && scrollPosition < windowSize.height
+            }
         >
             <Content>
-                <Logo hasDarkBackground={isMainHeader || isToggled} />
-                <HeaderMenuIcon
-                    hasDarkBackground={isMainHeader}
-                    isToggled={isToggled}
-                    setIsToggled={setIsToggled}
-                />
+                <Logo hasDarkBackground={isMainHeader || openedMenu != null} />
+                <HeaderMenuIcon hasDarkBackground={isMainHeader} isMenuOpened={openedMenu != null} />
             </Content>
-            <HeaderMenu isToggled={isToggled} />
+            {isMainHeader && (
+                <Cta isDisplayed={openedMenu != null}>
+                    {openedMenu === MenuList.DEFAULT && <HeaderMenu />}
+                    {openedMenu === MenuList.FORM && <HeaderForm />}
+                </Cta>
+            )}
         </Container>
     );
 };

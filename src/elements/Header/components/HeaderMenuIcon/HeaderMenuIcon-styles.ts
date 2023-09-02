@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ hasDarkBackground: boolean; isToggled: boolean }>`
+export const Container = styled.div<{ hasDarkBackground: boolean; isMenuOpened: boolean }>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,11 +8,11 @@ export const Container = styled.div<{ hasDarkBackground: boolean; isToggled: boo
     height: 2.5rem;
     cursor: pointer;
 
-    ${({ hasDarkBackground, isToggled, theme }) => {
+    ${({ hasDarkBackground, isMenuOpened, theme }) => {
         if (hasDarkBackground !== true) {
             return {
                 '> div': {
-                    backgroundColor: isToggled ? theme.colors.onSurface : theme.colors.background,
+                    backgroundColor: isMenuOpened ? theme.colors.onSurface : theme.colors.background,
                 },
             };
         }
@@ -20,17 +20,17 @@ export const Container = styled.div<{ hasDarkBackground: boolean; isToggled: boo
 
     & > div:nth-child(1) {
         transform-origin: top left;
-        transform: rotate(${({ isToggled }) => (isToggled ? '37deg' : '0')});
+        transform: rotate(${({ isMenuOpened }) => (isMenuOpened ? '37deg' : '0')});
     }
 
     & > div:nth-child(2) {
         transform-origin: center center;
-        transform: scaleX(${({ isToggled }) => (isToggled ? 0 : 1)});
+        transform: scaleX(${({ isMenuOpened }) => (isMenuOpened ? 0 : 1)});
     }
 
     & > div:nth-child(3) {
         transform-origin: bottom left;
-        transform: rotate(${({ isToggled }) => (isToggled ? '-37deg' : '0')});
+        transform: rotate(${({ isMenuOpened }) => (isMenuOpened ? '-37deg' : '0')});
     }
 `;
 

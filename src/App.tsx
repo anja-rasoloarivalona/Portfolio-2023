@@ -1,35 +1,40 @@
-import React from 'react';
-import { Wrapper, Container, Content, LandingPageWrapper, ContentWrapper } from './App-styles';
-import { LandingPage, HomePage } from './pages';
-
+import React, { createContext, useEffect, useState } from 'react';
+import { Container } from './App-styles';
 import { Header, SendEmail, ShortcutLinks } from './elements';
-import { useAppAnimation, useScrollPosition } from './hooks';
-import { useWindowSize } from 'usehooks-ts';
+import Routes from './routes';
+import { MenuList } from './types';
+
+type AppContextType = {
+    isLoaded: boolean;
+    openedMenu: MenuList | null;
+    setOpenedMenu: React.Dispatch<React.SetStateAction<MenuList | null>>;
+};
+
+export const AppContext = createContext<AppContextType>(null!);
 
 const App = () => {
-    const scrollPosition = useScrollPosition();
-    const windowSize = useWindowSize();
-    useAppAnimation();
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [openedMenu, setOpenedMenu] = useState<MenuList | null>(null);
+
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
 
     return (
-        <Wrapper>
-            <Header />
-            <ShortcutLinks />
-            <SendEmail />
-
+        <AppContext.Provider
+            value={{
+                isLoaded: isLoaded,
+                openedMenu: openedMenu,
+                setOpenedMenu: setOpenedMenu,
+            }}
+        >
             <Container>
-                <LandingPageWrapper id="landing-wrapper">
-                    <Header isMainHeader={false} />
-                    <LandingPage />
-                </LandingPageWrapper>
-
-                <ContentWrapper id="content-wrapper" onTop={scrollPosition >= windowSize.height / 2}>
-                    <Content>
-                        <HomePage />
-                    </Content>
-                </ContentWrapper>
+                <Header />
+                <ShortcutLinks />
+                <SendEmail />
+                <Routes />
             </Container>
-        </Wrapper>
+        </AppContext.Provider>
     );
 };
 

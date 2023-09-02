@@ -37,6 +37,9 @@ declare module 'styled-components' {
                     default: string;
                 };
             };
+            grid: {
+                default: FlattenSimpleInterpolation;
+            };
         };
         font: {
             size: {

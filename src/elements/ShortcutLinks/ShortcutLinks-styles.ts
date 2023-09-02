@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ windowHeight: number; scrollPosition: number }>`
+export const Container = styled.div<{ isDisplayed: boolean }>`
     position: fixed;
     bottom: 0;
     left: 3rem;
     z-index: 10;
     transition: all 0.3s ease;
 
-    ${({ windowHeight, scrollPosition }) => {
+    ${({ isDisplayed }) => {
         return {
-            transform: scrollPosition < windowHeight ? 'translateY(100%)' : 'translateY(0)',
+            transform: isDisplayed ? 'translateY(0%)' : 'translateY(100%)',
         };
     }}
 `;

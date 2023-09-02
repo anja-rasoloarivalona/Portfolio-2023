@@ -1,2 +1,2 @@
-export { default as LandingPage } from './Landing';
-export { default as HomePage } from './Home';
+export { default as MainPage } from './Main';
+export { MphasePage, BizbizharePage, NaiaPage } from './Projects';

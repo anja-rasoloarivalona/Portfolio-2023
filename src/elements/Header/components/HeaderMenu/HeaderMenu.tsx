@@ -1,21 +1,18 @@
-import React from 'react';
-import { Container, List, ListItem } from './HeaderMenu-styles';
+import React, { useContext } from 'react';
+import { List, ListItem } from './HeaderMenu-styles';
+import { AppContext } from '../../../../App';
+import { MenuList } from '../../../../types';
 
-type HeaderMenuProps = {
-    isToggled: boolean;
-};
-
-const HeaderMenu = ({ isToggled }: HeaderMenuProps) => {
+const HeaderMenu = () => {
+    const { setOpenedMenu } = useContext(AppContext);
     return (
-        <Container isToggled={isToggled}>
-            <List>
-                <ListItem>My projects</ListItem>
-                <ListItem>My skills</ListItem>
-                <ListItem>About me</ListItem>
-                <ListItem>Get in touch</ListItem>
-                <ListItem>French</ListItem>
-            </List>
-        </Container>
+        <List>
+            <ListItem>My projects</ListItem>
+            <ListItem>My skills</ListItem>
+            <ListItem>About me</ListItem>
+            <ListItem onClick={() => setOpenedMenu(MenuList.FORM)}>Get in touch</ListItem>
+            <ListItem>French</ListItem>
+        </List>
     );
 };
 

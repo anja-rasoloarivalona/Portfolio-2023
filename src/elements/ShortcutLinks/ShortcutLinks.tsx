@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Container,
     Content,
@@ -12,8 +12,10 @@ import {
 } from './ShortcutLinks-styles';
 
 // hooks
+import { AppContext } from '../../App';
 import { useScrollPosition } from '../../hooks';
 import { useWindowSize } from 'usehooks-ts';
+import { useLocation } from 'react-router-dom';
 
 // icons
 import { IoLogoBitbucket } from 'react-icons/io';
@@ -24,6 +26,8 @@ import { FaLinkedinIn } from 'react-icons/fa';
 const ShortcutLinks = () => {
     const scrollPosition = useScrollPosition();
     const windowSize = useWindowSize();
+    const { pathname } = useLocation();
+    const { openedMenu } = useContext(AppContext);
 
     const list = [
         {
@@ -45,7 +49,9 @@ const ShortcutLinks = () => {
     ];
 
     return (
-        <Container scrollPosition={scrollPosition} windowHeight={windowSize.height}>
+        <Container
+            isDisplayed={pathname !== '/' || scrollPosition >= windowSize.height || openedMenu != null}
+        >
             <Content>
                 <ContentList>
                     {list.map(({ Icon, label }, index) => (
