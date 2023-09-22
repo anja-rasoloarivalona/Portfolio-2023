@@ -4,8 +4,8 @@ import { contentTextStyles, contentStyles, loadStylesAnimation } from '../Landin
 export const Wrapper = styled.div<{ position: { x: number; y: number } }>`
     position: fixed;
     z-index: 2;
-    width: 60rem;
-    height: 60rem;
+    width: 55rem;
+    height: 55rem;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -14,7 +14,26 @@ export const Wrapper = styled.div<{ position: { x: number; y: number } }>`
     transform: ${({ position }) => `translate(${position.x}px, ${position.y}px)`};
     cursor: move;
     opacity: 0;
+    transition: opacity 0.5s ease-in;
     ${loadStylesAnimation};
+
+    @media (max-width: 1390px) {
+        width: 42rem;
+        height: 42rem;
+    }
+
+    @media (max-width: 1060px) {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    @media (max-width: 566px) {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        transform: translate(0px, 0px);
+        box-shadow: none;
+    }
 `;
 
 export const Container = styled.div<{ position: { x: number; y: number } }>`
@@ -24,6 +43,10 @@ export const Container = styled.div<{ position: { x: number; y: number } }>`
     width: 100vw;
     height: 100vh;
     transform: ${({ position }) => `translate(${position.x * -1}px, ${position.y * -1}px)`};
+
+    @media (max-width: 566px) {
+        transform: translate(0px, 0px);
+    }
 `;
 
 export const Video = styled.video`

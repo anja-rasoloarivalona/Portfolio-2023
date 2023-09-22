@@ -1,19 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Container, Content, ContentIntro, ContentTitle, ContentPresentation } from './HomeHero-styles';
-import { OutlinedButton } from '../../../../../../components';
+import { Animated, OutlinedButton } from '../../../../../../components';
 import { AppContext } from '../../../../../../App';
 import { MenuList } from '../../../../../../types';
+import { useTranslation } from 'react-i18next';
+import { useWindowSize } from 'usehooks-ts';
 
 const HomeHero = () => {
+    const { t } = useTranslation();
+    const containerRef = useRef<HTMLDivElement>(null);
     const { setOpenedMenu } = useContext(AppContext);
+    const windowSize = useWindowSize();
 
     return (
-        <Container>
+        <Container ref={containerRef}>
             <Content>
-                <ContentIntro>Hi, my name is</ContentIntro>
-                <ContentTitle>Anja Rasoloarivalona.</ContentTitle>
-                <ContentPresentation>I am a full-stack developer</ContentPresentation>
-                <OutlinedButton onClick={() => setOpenedMenu(MenuList.FORM)}>Contact</OutlinedButton>
+                <Animated triggerPosition={windowSize.height}>
+                    <ContentIntro>{t('homepage.hero.intro')}</ContentIntro>
+                    <ContentTitle>Anja Rasoloarivalona.</ContentTitle>
+                    <ContentPresentation>{t('homepage.hero.text')}</ContentPresentation>
+                    <OutlinedButton onClick={() => setOpenedMenu(MenuList.FORM)}>
+                        {t('homepage.hero.cta')}
+                    </OutlinedButton>
+                </Animated>
             </Content>
         </Container>
     );

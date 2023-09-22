@@ -1,18 +1,28 @@
 import React, { useContext } from 'react';
-import { List, ListItem } from './HeaderMenu-styles';
+import { Container, List, ListItem } from './HeaderMenu-styles';
 import { AppContext } from '../../../../App';
-import { MenuList } from '../../../../types';
+import { MenuList, Locale } from '../../../../types';
+import { useTranslation } from 'react-i18next';
+import { changeLocale } from '../../../../translations';
+import { useLocale } from '../../../../hooks';
 
 const HeaderMenu = () => {
+    const locale = useLocale();
+    const { t } = useTranslation();
     const { setOpenedMenu } = useContext(AppContext);
+
     return (
-        <List>
-            <ListItem>My projects</ListItem>
-            <ListItem>My skills</ListItem>
-            <ListItem>About me</ListItem>
-            <ListItem onClick={() => setOpenedMenu(MenuList.FORM)}>Get in touch</ListItem>
-            <ListItem>French</ListItem>
-        </List>
+        <Container>
+            <List>
+                <ListItem>{t('generic.my_works')}</ListItem>
+                <ListItem>{t('generic.my_skills')}</ListItem>
+                <ListItem>{t('generic.about_me')}</ListItem>
+                <ListItem onClick={() => setOpenedMenu(MenuList.FORM)}>{t('generic.get_in_touch')}</ListItem>
+                <ListItem onClick={() => changeLocale(locale === Locale.EN ? Locale.FR : Locale.EN)}>
+                    {t('generic.locale')}
+                </ListItem>
+            </List>
+        </Container>
     );
 };
 

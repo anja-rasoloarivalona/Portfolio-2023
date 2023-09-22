@@ -1,12 +1,16 @@
 import React from 'react';
-import { BizbizharePage, MainPage, MphasePage, NaiaPage } from '../pages';
+import { AboutPage, BizbizharePage, MainPage, MphasePage, NaiaPage } from '../pages';
 import { RoutesPath } from './routes-path';
 import { useRoutes } from 'react-router-dom';
 
-const routes = [
+const routes: Array<{ element: React.ReactNode; path: RoutesPath }> = [
     {
         element: <MainPage />,
         path: RoutesPath.HOME,
+    },
+    {
+        element: <AboutPage />,
+        path: RoutesPath.ABOUT,
     },
     {
         element: <BizbizharePage />,

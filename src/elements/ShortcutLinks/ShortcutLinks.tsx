@@ -51,6 +51,7 @@ const ShortcutLinks = () => {
     return (
         <Container
             isDisplayed={pathname !== '/' || scrollPosition >= windowSize.height || openedMenu != null}
+            hasOpenedMenu={openedMenu != null}
         >
             <Content>
                 <ContentList>

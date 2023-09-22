@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useState, useRef, useContext, useEffect } from 'react';
 import {
     AnimationContainer,
     AnimationMessage,
@@ -16,10 +16,11 @@ import {
 } from './HeaderForm-styles';
 import { OutlinedButton } from '../../../../components';
 import { AiOutlineSend, AiOutlineClose } from 'react-icons/ai';
-import '@dotlottie/player-component';
 import animation from '../../../../assets/animation.lottie';
 import { AppContext } from '../../../../App';
 import { sendEmail } from '../../../../tools';
+import '@dotlottie/player-component';
+import { useTranslation } from 'react-i18next';
 
 enum FormState {
     FILLING,
@@ -28,6 +29,7 @@ enum FormState {
 }
 
 const HeaderForm = () => {
+    const { t } = useTranslation();
     const lottieRef = useRef<any>(null);
     const [formData, setFormData] = useState({
         name: '',
@@ -37,6 +39,11 @@ const HeaderForm = () => {
     const [errorMessage, setErrorMessage] = useState<null | string>(null);
     const [formState, setFormState] = useState(FormState.FILLING);
     const { setOpenedMenu } = useContext(AppContext);
+    const [isMounted, seIsMounted] = useState(false);
+
+    useEffect(() => {
+        seIsMounted(true);
+    }, []);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
@@ -68,8 +75,8 @@ const HeaderForm = () => {
 
     return (
         <Container>
-            <Content isDisplayed={formState === FormState.FILLING}>
-                <Title>I'm excited to learn about your project. Ready to get started?</Title>
+            <Content isDisplayed={formState === FormState.FILLING} isMounted={isMounted}>
+                <Title>{t('form.title')}</Title>
                 <Form onSubmit={handleSubmit}>
                     {errorMessage != null && (
                         <ErrorBanner>
@@ -79,11 +86,11 @@ const HeaderForm = () => {
                     )}
 
                     <FormGroup>
-                        <FormGroupLabel>Name</FormGroupLabel>
+                        <FormGroupLabel>{t('generic.fullName')}</FormGroupLabel>
                         <FormGroupInput name="name" value={formData.name} onChange={handleChange} />
                     </FormGroup>
                     <FormGroup>
-                        <FormGroupLabel>Email</FormGroupLabel>
+                        <FormGroupLabel>{t('generic.email')}</FormGroupLabel>
                         <FormGroupInput
                             name="email"
                             type="email"
@@ -93,13 +100,13 @@ const HeaderForm = () => {
                     </FormGroup>
                     <FormGroup isExpanded>
                         <FormGroupLabel>
-                            Message <span className="required">*</span>
+                            {t('generic.message')} <span className="required">*</span>
                         </FormGroupLabel>
                         <FormGroupTextarea name="message" value={formData.message} onChange={handleChange} />
                     </FormGroup>
                     <FormFooter>
                         <OutlinedButton type="submit" leadingIcon={<AiOutlineSend />} isExpanded>
-                            Send message
+                            {t('form.cta')}
                         </OutlinedButton>
                     </FormFooter>
                 </Form>
@@ -112,7 +119,7 @@ const HeaderForm = () => {
                     ref={lottieRef}
                 />
                 <AnimationMessage>
-                    {formState === FormState.SENDING ? 'Sending message ...' : 'Thank you for your message.'}
+                    {formState === FormState.SENDING ? t('form.message_sending') : t('form.message_sent')}
                 </AnimationMessage>
             </AnimationContainer>
         </Container>

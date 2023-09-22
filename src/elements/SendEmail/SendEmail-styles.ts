@@ -1,17 +1,26 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ isDisplayed: boolean }>`
+export const Container = styled.div<{ isDisplayed: boolean; hasOpenedMenu: boolean }>`
     position: fixed;
     bottom: 0;
     right: 3rem;
     z-index: 10;
     transition: all 0.3s ease;
+    transform: translateY(200%);
+    opacity: 0;
 
     ${({ isDisplayed }) => {
-        return {
-            transform: isDisplayed ? 'translateY(0)' : 'translateY(200%)',
-        };
+        if (isDisplayed === true) {
+            return {
+                opacity: 1,
+                transform: 'translateY(0%)',
+            };
+        }
     }}
+
+    ${({ theme }) => theme.breakpoints.tablet} {
+        scale: ${({ hasOpenedMenu }) => (hasOpenedMenu ? 1 : 0)};
+    }
 `;
 
 export const Content = styled.div`
@@ -43,5 +52,5 @@ export const ContentText = styled.a`
 export const ContentBar = styled.div`
     width: 2px;
     height: 10rem;
-    background-color: ${({ theme }) => theme.colors.onBackground};
+    background-color: ${({ theme }) => theme.colors.onBackgroundDark};
 `;

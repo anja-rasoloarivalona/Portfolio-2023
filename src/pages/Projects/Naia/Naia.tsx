@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { ProjectWrapper } from '../components';
+import { config } from '../../../config/main';
+import { ProjectId } from '../../../types';
+import { NaiaAbout, NaiaRoles } from './sections';
 
 const Naia = () => {
-    return <div>Naia</div>;
+    const project = useMemo(() => config.projects.get(ProjectId.NAIA)!, []);
+
+    return (
+        <>
+            <ProjectWrapper project={project}>
+                <NaiaAbout />
+                <NaiaRoles />
+            </ProjectWrapper>
+        </>
+    );
 };
 
 export default Naia;

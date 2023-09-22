@@ -7,7 +7,7 @@ const inputStyle = css`
     color: ${({ theme }) => theme.colors.onSurface} !important;
     padding: ${({ theme }) => theme.box.spacing.md};
     font-size: ${({ theme }) => theme.font.size.lg};
-    border: 1px solid transparent;
+    border: 1px solid ${({ theme }) => theme.colors.onBackgroundDark};
 
     :focus {
         outline: none;
@@ -28,7 +28,7 @@ export const Container = styled.div`
     position: relative;
 `;
 
-export const Content = styled.div<{ isDisplayed: boolean }>`
+export const Content = styled.div<{ isDisplayed: boolean; isMounted: boolean }>`
     grid-column: 2 / 5;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,17 @@ export const Content = styled.div<{ isDisplayed: boolean }>`
     justify-content: center;
     padding-top: 7rem;
     transition: all 0.3s ease-in;
+    transform: translateY(3rem);
+    opacity: 0;
+
+    ${({ isMounted }) => {
+        if (isMounted === true) {
+            return {
+                transform: 'translateY(0)',
+                opacity: 1,
+            };
+        }
+    }}
 
     ${({ isDisplayed }) => {
         if (isDisplayed === false) {

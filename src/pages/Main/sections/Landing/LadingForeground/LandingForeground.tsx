@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useWindowSize } from 'usehooks-ts';
 import { Wrapper, Container, Video, Content, ContentText } from './LandingForeground-styles';
 import video from '../../../../../assets/background.mp4';
@@ -6,56 +6,100 @@ import { OutlinedButton } from '../../../../../components';
 
 type LandingPageForegroundProps = {
     text: string;
+    onClickLandingCta: () => void;
 };
 
-const SIZE = 600;
-
-const LandingForeground = ({ text }: LandingPageForegroundProps) => {
+const LandingForeground = ({ text, onClickLandingCta }: LandingPageForegroundProps) => {
     const windowSize = useWindowSize();
+    const wrapperRef = useRef<HTMLDivElement>(null);
+    const contentTextRef = useRef<HTMLHeadingElement>(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [mouseEnabled, setMouseEnabled] = useState(false);
+    const [moveEnabled, setMoveEnabled] = useState(false);
     const [isInitialized, setIsInitialized] = useState(false);
 
     useEffect(() => {
-        if (isInitialized === false && windowSize.width > 0 && windowSize.height > 0) {
-            setPosition({ x: 155, y: (windowSize.height - SIZE) / 2 });
+        if (
+            isInitialized === false &&
+            windowSize.width > 566 &&
+            windowSize.height > 0 &&
+            wrapperRef.current != null &&
+            contentTextRef.current != null
+        ) {
+            setPosition({
+                x: contentTextRef.current!.offsetLeft - 10,
+                y: (windowSize.height - wrapperRef.current.clientHeight - 90) / 2,
+            });
             setIsInitialized(true);
         }
-    }, [windowSize]);
+    }, [windowSize, contentTextRef, wrapperRef]);
 
     useEffect(() => {
-        if (mouseEnabled === true) {
+        if (moveEnabled === true && windowSize.width > 566) {
             document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+
+            document.addEventListener('touchmove', handleTouchMove, { passive: false });
+            document.addEventListener('touchend', handleTouchEnd);
         }
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [mouseEnabled]);
+    }, [moveEnabled]);
+
+    // *****************************************************************
+    // Mouse
+    // *****************************************************************
 
     const handleMouseMove = ({ clientX, clientY }: MouseEvent) => {
         setPosition({
-            x: clientX - SIZE / 2,
-            y: clientY - SIZE / 2,
+            x: clientX - wrapperRef.current!.clientHeight / 2,
+            y: clientY - wrapperRef.current!.clientHeight / 2,
         });
     };
 
-    if (isInitialized !== true) {
-        return <></>;
-    }
+    const handleMouseUp = () => {
+        // Disable the handleMouseMove function
+        setMoveEnabled(false);
+        // Remove the mousemove event listener
+        document.removeEventListener('mousemove', handleMouseMove);
+    };
+
+    // *****************************************************************
+    // Touch screen
+    // *****************************************************************
+
+    const handleTouchMove = (event: TouchEvent) => {
+        event.preventDefault();
+        const { clientX, clientY } = event.touches[0];
+        setPosition({
+            x: clientX - wrapperRef.current!.clientHeight / 2,
+            y: clientY - wrapperRef.current!.clientHeight / 2,
+        });
+    };
+
+    const handleTouchEnd = () => {
+        // Disable the handleMouseMove function
+        setMoveEnabled(false);
+        // Remove the mousemove event listener
+        document.removeEventListener('touchmove', handleTouchMove);
+    };
 
     return (
         <Wrapper
+            ref={wrapperRef}
             className="container"
             position={position}
-            onMouseDown={() => setMouseEnabled((prev) => !prev)}
+            onMouseDown={() => setMoveEnabled((prev) => !prev)}
+            onTouchStart={() => setMoveEnabled(true)}
         >
             <Container className="content" position={position}>
                 <Video autoPlay loop muted width="100%" height="auto">
                     <source src={video} type="video/mp4" />
                 </Video>
                 <Content>
-                    <ContentText>{text}</ContentText>
-                    <OutlinedButton>Let's begin</OutlinedButton>
+                    <ContentText ref={contentTextRef}>{text}</ContentText>
+                    <OutlinedButton onClick={() => onClickLandingCta()}>Let's begin</OutlinedButton>
                 </Content>
             </Container>
         </Wrapper>

@@ -24,11 +24,15 @@ declare module 'styled-components' {
                 mainHover: string;
                 dark: string;
                 darkHover: string;
+                layer: string;
+                layerDark: string;
             };
             background: string;
             onBackground: string;
+            onBackgroundDark: string;
             surface: string;
             onSurface: string;
+            onSurfaceDark: string;
             onSurfaceHighlighted: string;
         };
         config: {
@@ -38,7 +42,7 @@ declare module 'styled-components' {
                 };
             };
             grid: {
-                default: FlattenSimpleInterpolation;
+                default: FlattenInterpolation<ThemeProps<DefaultTheme>>;
             };
         };
         font: {
@@ -56,6 +60,12 @@ declare module 'styled-components' {
                 semiBold: string;
                 normal: string;
             };
+        };
+        breakpoints: {
+            desktop: string;
+            tablet: string;
+            midsize: string;
+            mobile: string;
         };
     }
 }

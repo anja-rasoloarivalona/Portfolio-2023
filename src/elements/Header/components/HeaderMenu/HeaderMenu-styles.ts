@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
+export const Container = styled.div`
     padding-top: 10%;
+
+    ${({ theme }) => theme.breakpoints.tablet} {
+        padding-top: 30%;
+    }
 `;
+
+export const List = styled.ul``;
 
 export const ListItem = styled.li`
     font-size: ${({ theme }) => theme.font.size.xl};

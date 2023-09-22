@@ -12,24 +12,27 @@ import video from '../../../../../assets/background.mp4';
 
 type LandingPageBackgroundProps = {
     text: string;
+    onClickLandingCta: () => void;
 };
 
-const LandingBackground = ({ text }: LandingPageBackgroundProps) => {
+const LandingBackground = ({ text, onClickLandingCta }: LandingPageBackgroundProps) => {
     return (
         <Container>
             <Video autoPlay loop muted width="100%" height="auto">
                 <source src={video} type="video/mp4" />
             </Video>
-            <AnimatedText>{text}</AnimatedText>
-
             <AnimatedTextContainer>
                 <AnimatedText>{text}</AnimatedText>
-                <OutlinedButton hasDarkBackground={false}>Let's begin</OutlinedButton>
+                <OutlinedButton hasDarkBackground={false} onClick={() => onClickLandingCta()}>
+                    Let's begin
+                </OutlinedButton>
             </AnimatedTextContainer>
 
             <Content>
                 <ContentText>{text}</ContentText>
-                <OutlinedButton hasDarkBackground={false}>Let's begin</OutlinedButton>
+                <OutlinedButton hasDarkBackground={false} onClick={() => onClickLandingCta()}>
+                    Let's begin
+                </OutlinedButton>
             </Content>
         </Container>
     );

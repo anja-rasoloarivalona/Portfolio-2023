@@ -1,0 +1,108 @@
+{
+    "form": {
+        "cta": "Send message",
+        "title": "I'm excited to learn about your project. Ready to get started?",
+        "message_sending": "Sending message ...",
+        "message_sent": "Thank you for your message."
+    },
+    "generic": {
+        "about_me": "About me",
+        "email": "Email address",
+        "fullName": "Full name",
+        "full_stack_developer": "Full Stack-Developer",
+        "get_in_touch": "Get in touch",
+        "learn_more": "Learn more",
+        "locale": "Français",
+        "message": "Message",
+        "my_skills": "My skills",
+        "my_works": "My works",
+        "visit_website": "Visit website"
+    },
+    "homepage": {
+        "contact": {
+            "cta": "Let's do this",
+            "text": "Interested in working together? We should queue up a chat. I'll buy the coffee.",
+            "title": "Start a project"
+        },
+        "hero": {
+            "cta": "Contact",
+            "intro": "Hi, my name is",
+            "text": "I am a Full-Stack Developer"
+        }
+    },
+    "projects": {
+        "bizbizshare": {
+            "tagline": "Meet BizbizShare, the B2B marketplace pros on a mission to make business eco-friendly! During my time there, I wore many hats as a developer. I managed our in-house marketplace and also had a blast overseeing multiple client-owned marketplaces across various industries. From industrial resources to snazzy office spaces, we were all about creating a circular economy",
+            "page": {
+                "about": {
+                    "title": "About Bizbizshare",
+                    "text_1": "When I joined BizbizShare, our tech setup resembled a colossal Jenga tower built entirely from vintage JAVA blocks. Picture this: it had the Herculean task of juggling authentication, subscriptions, data analysis, elasticsearch, payments, client and admin interface – you name it! The catch? If one piece decided to rebel, it sent the entire tower tumbling down like a house of cards. Not exactly a recipe for tech tranquility, right?  In response to this critical issue. the company bid a solemn farewell to the monolithic era, understanding the perils it posed as it's started its journey towards a microservices architecture, piece by piece.",
+                    "text_2": "My adventure at BizBizshare, spanning from August 2020 to November 2021,  started with a clear goal: rebuild the marketplace interface and admin pannel using the dynamic trio of React, Redux, and Vue.js. Our squad consisted of just three developers - one seasoned full-stack pro with three years under their belt, a part-time backend whiz who was juggling university studies, and yours truly, the only React mastermind. We were a young and vibrant team, all hovering around the ripe age of 24.",
+                    "text_3": "As time ticked on, I realized that being the sole front-end warrior often meant I was last in line to deliver features. Sometimes, things clicked seamlessly, but there were those hair-raising nights when we burned the midnight oil because a client meeting was looming on the horizon. Oddly enough, I relished the thrill, but I yearned for tranquility too. That's when I made a deliberate move to delve deep into the inner workings of the API that fueled our front-end, crafted using NodeJS and MySQL. By immersing myself in back-end development, I could smoothly connect the dots between the front and back ends, ultimately evolving into a genuine Full-Stack enthusiast. Consequently, come August 2021, we successfully dismantled the final piece of the monolithic puzzle. I extend heartfelt gratitude to my incredible colleagues for their unwavering support on this rollercoaster ride of growth and development."
+                },
+                "marketplaces": {
+                    "title": "Marketplaces",
+                    "cta": "Visit marketplace",
+                    "bizbizshare": {
+                        "description": "Bizbizshare, the in-house marketplace, prides itself on offering a unique specialization. It strive to provide a wide range of offerings, primarily focusing on warehouse inventory, equipment, real estate, human resources, and electronics."
+                    },
+                    "ben": {
+                        "description": "The Business Exchange Network, BEN, is a marketplace powered by the US Green Chamber of Commerce. It serves as a versatile gateway to numerous categories, meeting your diverse needs across the United States and worldwide."
+                    },
+                    "circular": {
+                        "description": "Circular Sharing stands as a prominent marketplace with a primary focus on Western Canada. Staying true to its name, its overarching mission revolves around empowering and nurturing an eco-friendly economy within the region."
+                    },
+                    "espaces": {
+                        "description": "Espaces et Cie primarily centers its efforts on revitalizing Montreal's downtown area. With a core mission to promote and facilitate office space rental, it caters to the diverse needs of businesses in terms of size, type, and specific requirements."
+                    }
+                },
+                "achievements": {
+                    "title": "Achievements",
+                    "introduction": "I've had the privilege of working in a rewarding environment that fostered personal and professional growth. With a passion for innovation and a commitment to excellence, I've accomplished numerous achievements",
+                    "text1": {
+                        "title": "New Marketplace Interface",
+                        "content": "I successfully revamped the marketplace interface with React and Redux, accomplishing this within less than a year as the sole front-end developer."
+                    },
+                    "text2": {
+                        "title": "Admin Panel",
+                        "content": "I managed to rebuild the admin panel using Vue.js, creating an efficient and user-friendly control center for streamlined operations."
+                    },
+                    "text3": {
+                        "title": "Tailored Web Solutions",
+                        "content": "I conceptualized and constructed a bespoke, end-to-end web application, serving our client's unique needs by seamlessly connecting their API to the marketplace while implementing specialized features."
+                    },
+                    "text4": {
+                        "title": "Bridge the gap",
+                        "content": "I played a pivotal role in maintaining and enhancing the core API, acting as the vital link that unites frontend and backend systems, ensuring optimal performance and functionality."
+                    }
+                }
+            }
+        },
+        "mphase": {
+            "tagline": "As a developer at mPhase, we have the privilege of engaging with a wide array of in-house projects, catering to thousands of daily users. Additionally, we extend our services to clients, enabling us to venture into various sectors and industries. This dynamic work environment is truly remarkable; each day brings fresh challenges and opportunities, making it a fast-paced, ever-evolving experience.",
+            "page": {
+                "about": {
+                    "title": "About mPhase",
+                    "text_1": "I became a part of mPhase in November 2021, and I'm currently still with the company. Our team comprises approximately 10 developers, with some specializing in specific areas such as Mobile Development or Back-end, while the majority, including myself, are Full Stack developers engaged in a variety of projects. It's within the confines of this company that I've had the invaluable opportunity to flourish as a Full Stack developer.",
+                    "text_2": "On a day-to-day basis, my work entails diving into multiple projects housed in different repositories, each operating in distinct environments and utilizing a wide spectrum of technologies. This spectrum ranges from Angular, Express.js, and MongoDB, to React and React Native. Juggling tasks that include code reviews, quality assurance, and development, it's safe to say that multitasking is second nature to us."
+                },
+                "projects": {
+                    "title": "Projects",
+                    "mtransport": {
+                        "text": "mTransport, our in-house solution, serves thousands of users daily. It's a comprehensive system for schools, providing real-time bus tracking via a user-friendly website for clients and institutions. Students are equipped with their own QR code cards for efficient boarding. Bus drivers use a mobile app to scan these cards, accessing trip details for a smooth journey. Parents receive mobile app notifications for added convenience. It's the future of student transport."
+                    },
+                    "astus": {
+                        "text": "We're currently working on AstusELD, an Electronic Logging Device project for the Astus Group. This initiative is aimed at improving driver safety and streamlining the tracking, management, and sharing of duty status records. It presents unique challenges, particularly due to the need for certification in compliance with relevant laws and regulations. Our role centers around developing a React Native and Typescript-based mobile app, ensuring a smooth and efficient experience for drivers as they navigate their daily tasks and responsibilities."
+                    },
+                    "scoola": {
+                        "text": "Scoola, one of our in-house projects, is nearing its launch. This comprehensive system is specifically designed to assist child daycare facilities. It empowers daycare employees by providing them with easy access to the daily list of assigned children. In parallel, managers are equipped with a dedicated website to efficiently oversee the status of each group, ensuring that the child-to-staff ratio is maintained at optimal levels. Additionally, parents are an integral part of this ecosystem through their own mobile application."
+                    }
+                }
+            }
+        },
+        "naia": {
+            "tagline": "Voluptatem dignissimos sequi modi, ratione accusantium nihil iste, expedita numquam nam esse odit pariatur quasi, vitae amet? A saepe vitae animi error voluptates facere ipsa id enim vel assumenda dolorum perferendis quos architecto voluptas, doloribus cumque magnam neque"
+        }
+    },
+    "test": "{{name}} is {{object}}."
+}

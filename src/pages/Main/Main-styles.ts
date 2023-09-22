@@ -5,7 +5,7 @@ const animatedCubeStyle = css`
     min-height: 100vh;
     position: relative;
     transform-style: preserve-3d;
-    perspective: 1000px;
+    perspective: 2000px;
     scroll-snap-align: start;
 `;
 

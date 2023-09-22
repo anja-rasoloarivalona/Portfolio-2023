@@ -4,16 +4,17 @@ import { AppContext } from '../../../../App';
 import { MenuList } from '../../../../types';
 
 type HeaderMenuIconProps = {
-    hasDarkBackground: boolean;
+    isMainHeader: boolean;
     isMenuOpened: boolean;
 };
 
-const HeaderMenuIcon = ({ hasDarkBackground, isMenuOpened }: HeaderMenuIconProps) => {
+const HeaderMenuIcon = ({ isMainHeader, isMenuOpened }: HeaderMenuIconProps) => {
     const { setOpenedMenu } = useContext(AppContext);
 
     return (
         <Container
-            hasDarkBackground={hasDarkBackground}
+            className="header__menu__icon"
+            isMainHeader={isMainHeader}
             isMenuOpened={isMenuOpened}
             onClick={() => setOpenedMenu((prev) => (prev != null ? null : MenuList.DEFAULT))}
         >

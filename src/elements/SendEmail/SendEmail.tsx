@@ -16,6 +16,7 @@ const SendEmail = () => {
     return (
         <Container
             isDisplayed={pathname !== '/' || openedMenu != null || scrollPosition >= windowSize.height}
+            hasOpenedMenu={openedMenu != null}
         >
             <Content>
                 <ContentText href="mailto:rasoloanja@gmail.com" target="_blank">

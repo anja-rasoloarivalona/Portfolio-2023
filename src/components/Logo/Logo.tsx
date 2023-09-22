@@ -8,7 +8,7 @@ type LogoProps = {
 
 const Logo = ({ hasDarkBackground = true }: LogoProps) => {
     return (
-        <Link to="/">
+        <Link to="/" className="logo">
             <Container hasDarkBackground={hasDarkBackground}>Anja.</Container>;
         </Link>
     );

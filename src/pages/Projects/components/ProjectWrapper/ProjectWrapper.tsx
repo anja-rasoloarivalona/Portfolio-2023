@@ -10,27 +10,34 @@ import {
     HeaderTitleContainer,
     HeaderTitle,
 } from './ProjectWrapper-styles';
-import image from '../../../../assets/test.png';
 import { OutlinedButton } from '../../../../components';
+import { Project } from '../../../../types';
+import { useTranslation } from 'react-i18next';
 
 type ProjectWrapperProps = {
     children: React.ReactNode;
+    project: Project;
 };
 
-const ProjectWrapper = ({ children }: ProjectWrapperProps) => {
+const ProjectWrapper = ({ children, project }: ProjectWrapperProps) => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     return (
         <Container>
             <HeaderWrapper>
                 <Header>
-                    <HeaderImage src={image} />
+                    <HeaderImage src={project.imageHero} />
                     <HeaderTitleContainer>
-                        <HeaderTitle>Bizbizshare</HeaderTitle>
+                        <HeaderTitle>{project.companyName}</HeaderTitle>
                     </HeaderTitleContainer>
                     <HeaderCta>
-                        <OutlinedButton>Visit website</OutlinedButton>
+                        <OutlinedButton externalPath={project.websiteUrl}>
+                            {t('generic.visit_website')}
+                        </OutlinedButton>
                     </HeaderCta>
                 </Header>
             </HeaderWrapper>

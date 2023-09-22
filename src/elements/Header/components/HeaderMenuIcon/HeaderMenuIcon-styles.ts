@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ hasDarkBackground: boolean; isMenuOpened: boolean }>`
+export const Container = styled.div<{ isMainHeader: boolean; isMenuOpened: boolean }>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,11 +8,27 @@ export const Container = styled.div<{ hasDarkBackground: boolean; isMenuOpened: 
     height: 2.5rem;
     cursor: pointer;
 
-    ${({ hasDarkBackground, isMenuOpened, theme }) => {
-        if (hasDarkBackground !== true) {
+    :hover {
+        > div {
+            background-color: ${({ theme }) => theme.colors.onBackground};
+        }
+    }
+
+    ${({ isMainHeader, theme }) => {
+        if (isMainHeader !== true) {
             return {
                 '> div': {
-                    backgroundColor: isMenuOpened ? theme.colors.onSurface : theme.colors.background,
+                    backgroundColor: theme.colors.onBackground,
+                },
+            };
+        }
+    }}
+
+    ${({ isMenuOpened, theme }) => {
+        if (isMenuOpened === true) {
+            return {
+                '> div': {
+                    backgroundColor: theme.colors.onBackground,
                 },
             };
         }
@@ -37,6 +53,6 @@ export const Container = styled.div<{ hasDarkBackground: boolean; isMenuOpened: 
 export const Bar = styled.div`
     width: 100%;
     height: 2px;
-    background-color: ${({ theme }) => theme.colors.onBackground};
+    background-color: ${({ theme }) => theme.colors.onBackgroundDark};
     transition: all 0.3s ease;
 `;

@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100vh;
     width: 100%;
+    margin-bottom: ${({ theme }) => theme.box.spacing.xxl};
 `;
 
-export const Text = styled.div`
+export const TextContainer = styled.div``;
+
+export const Text = styled.p`
     font-size: ${({ theme }) => theme.font.size.lg};
     color: ${({ theme }) => theme.colors.onSurface};
     line-height: 1.6;
-    padding: ${({ theme }) => `${theme.box.spacing.lg} 0`};
+    margin-bottom: ${({ theme }) => theme.box.spacing.lg};
+    text-align: justify;
 `;

@@ -3,13 +3,19 @@ import { Container } from './Landing-styles';
 import LandingBackground from './LandingBackground';
 import LadingForeground from './LadingForeground';
 
-const Landing = () => {
+type LandingProps = {
+    onClickLandingCta: () => void;
+};
+
+const Landing = ({ onClickLandingCta }: LandingProps) => {
     const text = 'Unleashing digital potential';
+
+    // const text = 'Donnez vie au numerique';
 
     return (
         <Container>
-            <LandingBackground text={text} />
-            <LadingForeground text={text} />
+            <LandingBackground text={text} onClickLandingCta={onClickLandingCta} />
+            <LadingForeground text={text} onClickLandingCta={onClickLandingCta} />
         </Container>
     );
 };

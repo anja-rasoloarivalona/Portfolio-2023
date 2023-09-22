@@ -6,6 +6,7 @@ import { useWindowSize } from 'usehooks-ts';
 import { useScrollPosition } from '../../hooks';
 import { useAnimation } from './hooks';
 import { AppContext } from '../../App';
+import Scroll from 'react-scroll';
 
 const Main = () => {
     const landingRef = useRef<HTMLDivElement>(null);
@@ -20,8 +21,10 @@ const Main = () => {
     useEffect(() => {
         if (isLoaded === true) {
             animationDisabled.current = true;
-            window.scrollTo({
-                top: contentRef.current!.offsetTop,
+            Scroll.scroller.scrollTo('content', {
+                duration: 0,
+                smooth: false,
+                offset: 1,
             });
             setTimeout(() => {
                 animationDisabled.current = false;
@@ -29,13 +32,22 @@ const Main = () => {
         }
     }, []);
 
+    const onClickLandingCta = () => {
+        Scroll.scroller.scrollTo('content', {
+            duration: 1200,
+            smooth: true,
+            linear: true,
+            offset: 1,
+        });
+    };
+
     return (
         <Container>
             <LandingPageWrapper ref={landingRef} className="landing-wrapper">
                 <Header isMainHeader={false} />
-                <Landing />
+                <Landing onClickLandingCta={onClickLandingCta} />
             </LandingPageWrapper>
-
+            <Scroll.Element name="content" />
             <ContentWrapper
                 ref={contentRef}
                 className="content-wrapper"

@@ -19,10 +19,24 @@ export const contentStyles = css`
 
 export const contentTextStyles = css`
     font-weight: bold;
-    font-size: 100px;
+    font-size: 8rem;
     text-transform: uppercase;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     user-select: none;
+
+    @media (max-width: 1390px) {
+        font-size: 6rem;
+    }
+
+    @media (max-width: 1060px) {
+        font-size: 4rem;
+    }
+
+    @media (max-width: 566px) {
+        max-width: 90%;
+        text-align: center;
+        line-height: 1.2;
+    }
 `;
 
 export const loadAnimation = keyframes`

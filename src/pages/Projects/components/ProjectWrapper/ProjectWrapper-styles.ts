@@ -10,6 +10,11 @@ export const HeaderWrapper = styled.div`
     width: 100%;
     height: 50vh;
     padding: 0 ${({ theme }) => theme.box.spacing.xl};
+
+    @media (max-width: 675px) {
+        height: 40vh;
+        max-height: 50rem;
+    }
 `;
 
 export const Header = styled.div`
@@ -28,7 +33,7 @@ export const Header = styled.div`
         z-index: 2;
         width: 100%;
         height: 100%;
-        background-color: #13001dd1;
+        background-color: ${({ theme }) => theme.colors.primary.layer};
     }
 `;
 
@@ -53,6 +58,18 @@ export const HeaderTitle = styled.h1`
     background: #070606;
     padding: ${({ theme }) => theme.box.spacing.md};
     border-radius: 1rem;
+
+    @media (max-width: 675px) {
+        font-size: 7rem;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 5rem;
+    }
+
+    @media (max-width: 380px) {
+        font-size: 4rem;
+    }
 `;
 
 export const HeaderCta = styled.div`
@@ -66,6 +83,8 @@ export const HeaderImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
+    left: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,5 +97,11 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-    grid-column: 3 / 4;
+    grid-column: 1 / -1;
+    padding-top: ${({ theme }) => theme.box.spacing.xxl};
+    ${({ theme }) => theme.config.grid.default};
+
+    > * {
+        grid-column: 3 / 4;
+    }
 `;

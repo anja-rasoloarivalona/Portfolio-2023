@@ -1,0 +1,71 @@
+{
+    "form": {
+        "cta": "Envoyer message",
+        "title": "Je suis impatient de découvrir votre projet. Vous êtes prêt à commencer ?",
+        "message_sending": "Envoi du message en cours ...",
+        "message_sent": "Merci pour votre message."
+    },
+    "generic": {
+        "about_me": "À mon propos",
+        "email": "Addresse email",
+        "fullName": "Nom complet",
+        "full_stack_developer": "Développeur Full-Stack",
+        "get_in_touch": "Prendre contact",
+        "learn_more": "En savoir plus",
+        "locale": "English",
+        "message": "Message",
+        "my_skills": "Mes compétences",
+        "my_works": "Mes travaux",
+        "visit_website": "Visiter"
+    },
+    "homepage": {
+        "contact": {
+            "cta": "Allons-y",
+            "text": "Intéressé à travailler ensemble ? On pourrait en discuter autour d'une bonne tasse de café. C'est moi qui offre.",
+            "title": "Lancer un projet"
+        },
+        "hero": {
+            "cta": "Contact",
+            "intro": "Bonjour, mon nom est",
+            "text": "Je suis un Développeur Full-Stack"
+        }
+    },
+    "projects": {
+        "bizbizshare": {
+            "tagline": "BizbizShare is a company that specializes in B2B marketplace and has as it's main objectif to deliver a circular economy in different fields ranging from industrial resources to business office space. During my time at the company, I had the opportunity to flourish as a developer while managing our in-house marketplace as well as 7 others white labelled marketplaces owned by clients across multiple industries.",
+            "page": {
+                "about": {
+                    "title": "About Bizbizshare",
+                    "text_1": "My journey at BizBizshare, spanning August 2020 to November 2021, started with a clear goal: revamp the marketplace interface using React, Redux, and Vue.js. I began as a Front-End developer and left as a Full-Stack developer. I'm truly grateful to my colleagues for their support in my growth and development.",
+                    "text_2": "",
+                    "text_3": ""
+                },
+                "marketplaces": {
+                    "title": "Marketplaces",
+                    "cta": "Visiter",
+                    "bizbizshare": {
+                        "description": "Bizbizshare, the in-house marketplace, prides itself on offering a unique specialization. It strive to provide a wide range of offerings, primarily focusing on warehouse inventory, equipment, real estate, human resources, and electronics."
+                    },
+                    "ben": {
+                        "description": "The Business Exchange Network, BEN, is a marketplace powered by the US Green Chamber of Commerce. It serves as a versatile gateway to numerous categories, meeting your diverse needs across the United States and worldwide."
+                    },
+                    "circular": {
+                        "description": "Circular Sharing stands as a prominent marketplace with a primary focus on Western Canada. Staying true to its name, its overarching mission revolves around empowering and nurturing an eco-friendly economy within the region."
+                    },
+                    "espaces": {
+                        "description": "Espaces et Cie primarily centers its efforts on revitalizing Montreal's downtown area. With a core mission to promote and facilitate office space rental, it caters to the diverse needs of businesses in terms of size, type, and specific requirements."
+                    }
+                },
+                "achievements": {
+                    "title": "Accomplissements"
+                }
+            }
+        },
+        "mphase": {
+            "tagline": "Voluptatem dignissimos sequi modi, ratione accusantium nihil iste, expedita numquam nam esse odit pariatur quasi, vitae amet? A saepe vitae animi error voluptates facere ipsa id enim vel assumenda dolorum perferendis quos architecto voluptas, doloribus cumque magnam neque"
+        },
+        "naia": {
+            "tagline": "Voluptatem dignissimos sequi modi, ratione accusantium nihil iste, expedita numquam nam esse odit pariatur quasi, vitae amet? A saepe vitae animi error voluptates facere ipsa id enim vel assumenda dolorum perferendis quos architecto voluptas, doloribus cumque magnam neque"
+        }
+    }
+}

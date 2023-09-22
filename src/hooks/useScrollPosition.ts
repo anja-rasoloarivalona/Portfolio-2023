@@ -7,7 +7,9 @@ export const useScrollPosition = () => {
      * Handle scroll
      */
     const handleScroll = () => {
-        const position = window.scrollY || document.documentElement.scrollTop;
+        // const position = window.scrollY || document.documentElement.scrollTop;
+        const position = window.scrollY;
+
         setScrollPosition(position);
     };
 
