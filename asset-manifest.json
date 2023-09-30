@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.61cc7cb9.css",
+    "main.js": "/static/js/main.3f005d62.js",
+    "static/js/626.0f1b8324.chunk.js": "/static/js/626.0f1b8324.chunk.js",
+    "static/js/596.8c6610b5.chunk.js": "/static/js/596.8c6610b5.chunk.js",
+    "static/js/688.ef398ce7.chunk.js": "/static/js/688.ef398ce7.chunk.js",
+    "static/js/673.1cc67e8c.chunk.js": "/static/js/673.1cc67e8c.chunk.js",
+    "static/js/33.54032244.chunk.js": "/static/js/33.54032244.chunk.js",
+    "static/js/127.fecb165a.chunk.js": "/static/js/127.fecb165a.chunk.js",
+    "static/js/825.da23c477.chunk.js": "/static/js/825.da23c477.chunk.js",
+    "static/js/269.2c1427d6.chunk.js": "/static/js/269.2c1427d6.chunk.js",
+    "static/js/951.3b73314e.chunk.js": "/static/js/951.3b73314e.chunk.js",
+    "background.mp4": "/background.mp4",
+    "static/media/mphase.png": "/static/media/mphase.477aba824068ca91cd92.png",
+    "static/media/mphase-hero.png": "/static/media/mphase-hero.85e075438c29a5903c45.png",
+    "static/media/circular.png": "/static/media/circular.ac4dc0dd8ba98e6eb199.png",
+    "static/media/ben.png": "/static/media/ben.125766c1021c4b619bd1.png",
+    "static/media/bizbizshare.png": "/static/media/bizbizshare.5fee85a75c2d63f585db.png",
+    "static/media/bizbizshare1.png": "/static/media/bizbizshare1.cf07946644b6394a407e.png",
+    "static/media/bizbizshare-hero.png": "/static/media/bizbizshare-hero.63ca96a748bb3966f488.png",
+    "static/media/espaces1.png": "/static/media/espaces1.01b601def66f34ebf820.png",
+    "static/media/naia-hero.png": "/static/media/naia-hero.8e375c23b7a3dfe7c6bb.png",
+    "static/media/naia.png": "/static/media/naia.5730aa30d0bbab29fa2e.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/animation.lottie": "/static/media/animation.436f030c2b9daadbdbde.lottie",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.61cc7cb9.css.map": "/static/css/main.61cc7cb9.css.map",
+    "main.3f005d62.js.map": "/static/js/main.3f005d62.js.map",
+    "596.8c6610b5.chunk.js.map": "/static/js/596.8c6610b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61cc7cb9.css",
+    "static/js/main.3f005d62.js"
+  ]
+}
