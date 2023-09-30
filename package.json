@@ -1,5 +1,5 @@
 {
-    "homepage": "https://anjarasoloarivalona.com",
+    "homepage": "http://anjarasoloarivalona.com",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
@@ -7,7 +7,6 @@
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
-        "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
     "dependencies": {
@@ -74,7 +73,7 @@
         "sass-loader": "12.3.0",
         "scrollmagic": "2.0.8",
         "semver": "7.3.5",
-        "serve": "14.2.0",
+        "serve": "^14.2.0",
         "slick-carousel": "1.8.1",
         "source-map-loader": "3.0.0",
         "style-loader": "3.3.1",
