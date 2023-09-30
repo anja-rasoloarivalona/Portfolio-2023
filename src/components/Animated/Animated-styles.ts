@@ -4,6 +4,11 @@ const beforeAnimation = keyframes`
     0% {
         transform: translateX(-110%);
     }
+
+    /* 100% {
+        transform: translateX(0);
+    } */
+ 
     50% {
         transform: translateX(0);
     }
@@ -16,12 +21,15 @@ const afterAnimation = keyframes`
     0% {
         transform: translateX(0%);
     }
+    /* 100% {
+        transform: translateX(0%);
+    } */
     100% {
         transform: translateX(110%);
     }
 `;
 
-export const Slide = styled.div<{ playAnimation: boolean }>`
+export const Slide = styled.div<{ playAnimation: boolean; useDarkBackground: boolean }>`
     position: absolute;
     top: -0.2rem;
     left: -0.2rem;
@@ -56,7 +64,8 @@ export const Slide = styled.div<{ playAnimation: boolean }>`
 
     &::after {
         z-index: 3;
-        background-color: ${({ theme }) => theme.colors.background};
+        background-color: ${({ theme, useDarkBackground }) =>
+            useDarkBackground ? theme.colors.background : 'white'};
 
         ${({ playAnimation }) =>
             playAnimation &&

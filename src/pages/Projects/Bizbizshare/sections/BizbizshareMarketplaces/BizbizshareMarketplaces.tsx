@@ -1,56 +1,37 @@
 import React from 'react';
-import {
-    Container,
-    List,
-    ListItem,
-    ListItemCta,
-    ListItemHeader,
-    ListItemImage,
-    ListItemImageContainer,
-    ListItemText,
-} from './BizbizshareMarketplaces-styles';
-import { OutlinedButton, Title } from '../../../../../components';
+import { List } from './BizbizshareMarketplaces-styles';
+import { ProjectCard, Section, Title } from '../../../../../components';
 import { useTranslation } from 'react-i18next';
-import { ResourceKey } from 'i18next';
 import { BizbizshareMarketplace } from './types';
-import { useWindowSize } from 'usehooks-ts';
 import { BIZBIZSHARE_MARKETPLACES_LIST } from './data';
-import { BizbizshareMarketplacesSlider } from './components';
-
-const SLIDER_BREAKPOINT = 750;
 
 const BizbizshareMarketplaces = () => {
     const { t } = useTranslation();
-    const windowSize = useWindowSize();
 
-    const renderMarketplace = (marketplace: BizbizshareMarketplace) => {
+    const renderMarketplaceCardItem = (marketplace: BizbizshareMarketplace, index: number) => {
         return (
-            <ListItem key={marketplace.id}>
-                <ListItemHeader>{marketplace.title}</ListItemHeader>
-                <ListItemImageContainer>
-                    <ListItemImage src={marketplace.image} />
-                </ListItemImageContainer>
-                <ListItemText>
-                    {t(`projects.bizbizshare.page.marketplaces.${marketplace.id}.description` as ResourceKey)}
-                </ListItemText>
-                <ListItemCta className="cta">
-                    <OutlinedButton isExpanded hasArrow={false} externalPath={marketplace.url}>
-                        {t('projects.bizbizshare.page.marketplaces.cta')}
-                    </OutlinedButton>
-                </ListItemCta>
-            </ListItem>
+            <ProjectCard
+                key={index}
+                subTitle={marketplace.region}
+                title={marketplace.title}
+                description={`projects.bizbizshare.page.marketplaces.${marketplace.id}.description`}
+                image={marketplace.image}
+                externalPath={marketplace.url}
+                index={index}
+                ctaText="projects.bizbizshare.page.marketplaces.cta"
+            />
         );
     };
 
     return (
-        <Container>
-            <Title>{t('projects.bizbizshare.page.marketplaces.title')}</Title>
-            {windowSize.width > SLIDER_BREAKPOINT ? (
-                <List>{BIZBIZSHARE_MARKETPLACES_LIST.map((skill) => renderMarketplace(skill))}</List>
-            ) : (
-                <BizbizshareMarketplacesSlider renderMarketplace={renderMarketplace} />
-            )}
-        </Container>
+        <Section>
+            <Title expandBottomSpace>{t('projects.bizbizshare.page.marketplaces.title')}</Title>
+            <List>
+                {BIZBIZSHARE_MARKETPLACES_LIST.map((marketplace, index) =>
+                    renderMarketplaceCardItem(marketplace, index)
+                )}
+            </List>
+        </Section>
     );
 };
 

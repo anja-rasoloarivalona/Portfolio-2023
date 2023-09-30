@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { Container } from './App-styles';
-import { Header, SendEmail, ShortcutLinks } from './elements';
+import { DarkHeader, SendEmail, ShortcutLinks } from './elements';
 import Routes from './routes';
 import { MenuList } from './types';
 import { useLocation } from 'react-router-dom';
@@ -21,23 +21,24 @@ const App = () => {
     const [viewedPathnames, setViewedPathnames] = useState<Array<string>>([]);
 
     useEffect(() => {
+        // reset hash
+        window.location.hash = '';
+        window.scrollTo(0, 0);
+
+        //  reset scroll
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // enable app
         setIsLoaded(true);
     }, []);
 
     useEffect(() => {
-        if (
-            'scrollRestoration' in window.history &&
-            isLoaded &&
-            viewedPathnames.includes(pathname) === false
-        ) {
-            window.history.scrollRestoration = 'manual';
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Oper
-        }
-    }, [pathname]);
-
-    useEffect(() => {
         if (viewedPathnames.includes(pathname) === false) {
+            // Keep track of viewed pathnames
             setViewedPathnames((prev) => [...prev, pathname]);
         }
     }, [pathname]);
@@ -52,7 +53,7 @@ const App = () => {
             }}
         >
             <Container className="app">
-                <Header />
+                <DarkHeader />
                 <ShortcutLinks />
                 <SendEmail />
                 <Routes />

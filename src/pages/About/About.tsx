@@ -1,15 +1,11 @@
 import React from 'react';
-import {
-    Wrapper,
-    Container,
-    Content,
-    Image,
-    ContentTitle,
-    ContentText,
-    ImageContainer,
-} from './About-styles';
+import { Wrapper, Container, Content, Image, ContentTitle, ImageContainer } from './About-styles';
+import { useTranslation } from 'react-i18next';
+import { Paragraph } from '../../components';
+import { formatText } from '../../tools';
 
 const About = () => {
+    const { t } = useTranslation();
     return (
         <Wrapper>
             <Container>
@@ -17,43 +13,12 @@ const About = () => {
                     <Image src="https://media.licdn.com/dms/image/C4E03AQHkC0EV6wsGiA/profile-displayphoto-shrink_800_800/0/1661545174878?e=1698883200&v=beta&t=JMa9q9guhoQmecMVaGBFO0lxJe3rTdFY7L7mjT5hWPs" />
                 </ImageContainer>
                 <Content>
-                    <ContentTitle>"I just caught fire coding."</ContentTitle>
-                    <ContentText>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus, eum minima
-                        fugit reprehenderit ut voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem,
-                        facere saepe, similique, tempora sit hic atque ad? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Maxime possimus, eum minima fugit reprehenderit ut
-                        voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem, facere saepe,
-                        similique, tempora sit hic atque ad?
-                    </ContentText>
-                    <ContentText>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus, eum minima
-                        fugit reprehenderit ut voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem,
-                        facere saepe, similique, tempora sit hic atque ad? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Maxime possimus, eum minima fugit reprehenderit ut
-                        voluptatem. Eaque recusandae fugit quibusdam deleniti ad?
-                    </ContentText>
-                    <ContentText>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus, eum minima
-                        fugit reprehenderit ut voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem,
-                        facere saepe, similique, tempora sit hic atque ad? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Maxime possimus, eum minima fugit reprehenderit ut
-                        voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem, facere saepe,
-                        similique, tempora sit hic atque ad?
-                    </ContentText>
-                    <ContentText>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus, eum minima
-                        fugit reprehenderit ut voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem,
-                        facere saepe, similique, tempora sit hic atque ad? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Maxime possimus, eum minima fugit reprehenderit ut
-                        voluptatem. Eaque recusandae fugit quibusdam deleniti dolorem, facere saepe,
-                        similique, tempora sit hic atque ad? Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Maxime possimus, eum minima fugit reprehenderit ut voluptatem. Eaque
-                        recusandae fugit quibusdam deleniti dolorem, facere saepe, similique, tempora sit hic
-                        atque ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime possimus,
-                        eum minima fugit reprehenderit ut voluptatem. Eaque recusandae fugit quibusdam
-                        deleniti dolorem, facere saepe, similique, tempora sit hic atque ad?
-                    </ContentText>
+                    <ContentTitle>"{t('about.title')}"</ContentTitle>
+                    <Paragraph>{formatText(t('about.text_1'))}</Paragraph>
+                    <Paragraph>{formatText(t('about.text_2'))}</Paragraph>
+                    <Paragraph>{formatText(t('about.text_3'))}</Paragraph>
+                    <Paragraph>{formatText(t('about.text_4'))}</Paragraph>
+                    <Paragraph>{formatText(t('about.text_5'))}</Paragraph>
                 </Content>
             </Container>
         </Wrapper>

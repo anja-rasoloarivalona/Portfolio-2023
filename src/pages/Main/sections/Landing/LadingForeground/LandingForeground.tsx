@@ -3,13 +3,14 @@ import { useWindowSize } from 'usehooks-ts';
 import { Wrapper, Container, Video, Content, ContentText } from './LandingForeground-styles';
 import video from '../../../../../assets/background.mp4';
 import { OutlinedButton } from '../../../../../components';
+import { useTranslation } from 'react-i18next';
 
 type LandingPageForegroundProps = {
-    text: string;
     onClickLandingCta: () => void;
 };
 
-const LandingForeground = ({ text, onClickLandingCta }: LandingPageForegroundProps) => {
+const LandingForeground = ({ onClickLandingCta }: LandingPageForegroundProps) => {
+    const { t } = useTranslation();
     const windowSize = useWindowSize();
     const wrapperRef = useRef<HTMLDivElement>(null);
     const contentTextRef = useRef<HTMLHeadingElement>(null);
@@ -98,8 +99,8 @@ const LandingForeground = ({ text, onClickLandingCta }: LandingPageForegroundPro
                     <source src={video} type="video/mp4" />
                 </Video>
                 <Content>
-                    <ContentText ref={contentTextRef}>{text}</ContentText>
-                    <OutlinedButton onClick={() => onClickLandingCta()}>Let's begin</OutlinedButton>
+                    <ContentText ref={contentTextRef}>{t('landing.title')}</ContentText>
+                    <OutlinedButton onClick={() => onClickLandingCta()}> {t('landing.cta')}</OutlinedButton>
                 </Content>
             </Container>
         </Wrapper>

@@ -1,2 +1,2 @@
 export { sendEmail } from './send-email';
-export { formatJSX } from './format-jsx';
+export { formatJSX, formatText } from './format-jsx';

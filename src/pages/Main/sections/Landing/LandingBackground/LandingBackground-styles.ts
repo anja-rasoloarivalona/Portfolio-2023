@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { contentTextStyles, contentStyles } from '../Landing-styles';
+import { DISPLAY_STATE } from '../../../../../types';
 
 export const Container = styled.div`
     position: absolute;
@@ -37,9 +38,19 @@ export const AnimatedText = styled.h1`
     ${contentTextStyles}
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<{ displayState: DISPLAY_STATE }>`
     ${contentStyles};
     z-index: 4;
+
+    ${({ displayState }) => {
+        return {
+            button: {
+                transition: 'all .3s ease-in',
+                opacity: displayState === DISPLAY_STATE.LOADED ? 1 : 0,
+                transform: `translateY(${displayState === DISPLAY_STATE.LOADED ? '0%' : '100%'})`,
+            },
+        };
+    }}
 `;
 
 export const ContentText = styled.h1`

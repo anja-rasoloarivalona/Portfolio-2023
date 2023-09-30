@@ -33,8 +33,8 @@ export const useScrollTrigger = ({ triggerRef, triggerPosition, offset = 0 }: Pr
                 if (elementTop.current === 0) {
                     const elementRect = element.getBoundingClientRect();
                     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    const lol = elementRect.top + scrollTop;
-                    elementTop.current = lol;
+                    const distance = elementRect.top + scrollTop;
+                    elementTop.current = distance;
                     return;
                 }
 

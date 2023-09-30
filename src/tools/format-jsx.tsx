@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { Text } from '../components';
 
 type Props = Record<string, ReactNode>;
 
@@ -34,4 +35,30 @@ export const formatJSX = (template: string, props: Props): ReactNode => {
     }
 
     return <>{jsxElements}</>;
+};
+
+export const formatText = (inputString: string) => {
+    // Split the input string using a regular expression to find text enclosed in <>
+    const parts = inputString.split(/<>/);
+
+    // Initialize an empty array to store the parsed parts
+    const parsedParts = [];
+
+    for (let i = 0; i < parts.length; i++) {
+        const part = parts[i];
+
+        if (i % 2 === 0) {
+            // If the index is even, it's regular text; add it as is
+            parsedParts.push(part);
+        } else {
+            // If the index is odd, it's text enclosed in <>, wrap it in <TextComponent>
+            parsedParts.push(
+                <Text key={i} primary>
+                    {part}
+                </Text>
+            );
+        }
+    }
+
+    return <>{parsedParts}</>;
 };

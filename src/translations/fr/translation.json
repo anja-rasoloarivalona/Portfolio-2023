@@ -1,4 +1,12 @@
 {
+    "about": {
+        "title": "Le code, une véritable passion",
+        "text_1": "Depuis que je suis devenu développeur <>Full-Stack<>, je n'ai plus l'impression de \"travailler\", mes journées ressemblent plus à une dose quotidienne de bonheur ! Bien plus qu'un simple boulot, c'est une <>passion<> qui me fait compter les heures les vendredis soirs, attendant avec impatience le lundi pour replonger dedans. Oui, j'adore la programmation.",
+        "text_2": "Maintenant, un peu d'histoire : Je viens de <>Madagascar<>. En 2014, j'ai décroché mon baccalauréat français en série scientifique avec les mathématiques en  tant que spécialisation. Ensuite, j'ai rejoint <>HEC Montréal<> pour un <>Baccalauréat en Administration des Affaires<>. La finance était mon premier choix, mais il s'est avéré que les chiffres seuls ne suffisaient pas. C'est là que j'ai décidé de combiner la finance avec la <>Technologie de l'Information<>. Au cours de mes deux dernières années universitaires, j'ai beaucoup appris sur la gestion des projets informatiques. Ce n'est qu'au dernier semestre, en 2018, que j'ai suivi mon premier cours de programmation. Et bam !  Le coup de foudre : j'avais trouvé ma vocation, un mélange de <>créativité<> et de <>résolution de problèmes<>.  ​Ce fut la première fois que j'éprouvais un désir intense de résoudre tous les problèmes qui entravaient mon chemin, même si cela signifiait d'aller se coucher après le lever du soleil.",
+        "text_3": "Néanmoins, la réalité m'a vite rattrappé peu de temps après l'obtention de mon diplôme. J'avais besoin d'un emploi, et être embauché en tant que développeur junior avec seulement un cours à mon actif était un défi de taille. Alors, je suis devenu Gestionnaire de Clientèle pour une start-up française, mais au fond de moi, la programmation était mon véritable amour. C'est là qu'intervient l'acharnement de l'<>auto-apprentissage<> : travailler toute la journée, coder toute la nuit.",
+        "text_4": "Puis est arrivée l'année 2020, l'année où le monde s'est arrêté, dû à la Covid-19. J'ai perdu mon emploi, mais j'avais aussi des responsabilités familiales. Alors, pendant le confinement, j'ai redoublé d'efforts qui ont fini par payer. Quelques mois plus tard, j'ai décroché mon premier contrat en tant que développeur.",
+        "text_5": "Mes années chez <>Bizbishare<> ont été transformatrices. J'ai grandi, évolué et suis devenu un <>développeur Full-Stack<> confiant. Armé de ces connaissances, j'ai ensuite rejoint <>mPhase<>, plongeant dans divers projets dans un environnement <>agile<>. Maintenant, je peux créer des produits numériques de A à Z, tout comme je l'ai fait avec la plateforme <>NAIA<>. À la personne qui m'a poussé vers la Finance et la Technologie de l'Information à l'université, je te remercie mille fois ! Tu m'as lancé dans cette incroyable aventure de programmation, et depuis, je n'ai pas regardé en arrière !"
+    },
     "form": {
         "cta": "Envoyer message",
         "title": "Je suis impatient de découvrir votre projet. Vous êtes prêt à commencer ?",
@@ -19,6 +27,12 @@
         "visit_website": "Visiter"
     },
     "homepage": {
+        "about": {
+            "cta": "En savoir plus",
+            "text_1": "Bonjour ! Je vous remercie d'avoir pris le temps de visiter mon portefolio. Je m'appelle Anja et je viens d'Antananarivo, la capitale de Madagascar. Actuellement, je suis plongé dans l'univers technologique en tant que Développeur Full-Stack chez mPhase.",
+            "text_2": "Mon parcours jusqu'à cette position a été tout sauf ennuyeux. Pour être complètement honnête, devenir développeur n'était pas ce que j'avais initialement prévu. La vie m'a fait emprunter des chemins inattendus et m'a introduit dans le passionnant domaine de la programmation et du développement. Je suis vraiment reconnaissant pour les opportunités qui se sont présentées à moi, et j'ai hâte de partager mes expériences et mes créations avec vous. Merci encore pour votre visite, et j'espère que vous prendrez plaisir à explorer mon travail !",
+            "title": "À mon propos"
+        },
         "contact": {
             "cta": "Allons-y",
             "text": "Intéressé à travailler ensemble ? On pourrait en discuter autour d'une bonne tasse de café. C'est moi qui offre.",
@@ -28,44 +42,127 @@
             "cta": "Contact",
             "intro": "Bonjour, mon nom est",
             "text": "Je suis un Développeur Full-Stack"
+        },
+        "skills": {
+            "frontend": {
+                "title": "Front-End",
+                "description": "J'apprécie le développement Front-End. Cela me procure une satisfaction lorsque qu'un produit prend vie sur mon écran."
+            },
+            "backend": {
+                "title": "Back-End",
+                "description": "J'adore construire et entretenir des APIs qui respectent les normes et aux standards. Les données, c'est crucial."
+            },
+            "tools": {
+                "title": "Outils",
+                "description": "Voici une liste d'outils et de méthode de travail que j'utilise professionnellement et personnellement."
+            }
         }
+    },
+    "landing": {
+        "title": "Donnez vie au numerique",
+        "cta": "Allons-y"
     },
     "projects": {
         "bizbizshare": {
-            "tagline": "BizbizShare is a company that specializes in B2B marketplace and has as it's main objectif to deliver a circular economy in different fields ranging from industrial resources to business office space. During my time at the company, I had the opportunity to flourish as a developer while managing our in-house marketplace as well as 7 others white labelled marketplaces owned by clients across multiple industries.",
+            "tagline": "BizbizShare est une entreprise spécialisée dans les marketplaces B2B dont l'objectif principal est de promouvoir une économie circulaire dans différents secteurs, allant des ressources industrielles aux espaces de bureau d'entreprise. Pendant mon séjour dans l'entreprise, j'ai eu l'opportunité de m'épanouir en tant que développeur tout en gérant notre place de marché interne ainsi que 7 autres places de marché en marque blanche appartenant à des clients de diverses industries.",
             "page": {
                 "about": {
-                    "title": "About Bizbizshare",
-                    "text_1": "My journey at BizBizshare, spanning August 2020 to November 2021, started with a clear goal: revamp the marketplace interface using React, Redux, and Vue.js. I began as a Front-End developer and left as a Full-Stack developer. I'm truly grateful to my colleagues for their support in my growth and development.",
-                    "text_2": "",
-                    "text_3": ""
+                    "title": "À propos de BizbizShare",
+                    "text_1": "BizbizShare se spécialise dans les <>marketplaces<> pour promouvoir l'économie circulaire. Ils ont leur propre solution qui est aussi offerte en marque blanche, le tout géré par un seul code source. Lorsque j'ai rejoint l'entreprise, notre configuration technologique ressemblait à une gigantesque tour de <>Jenga<> construite entièrement avec des blocs <>JAVA<> vintage. Imaginez ceci : elle avait la tâche herculéenne de jongler avec l'authentification, les abonnements, l'analyse des données, Elasticsearch, les paiements, l'interface client et administrateur - tout ce que vous voulez ! Le hic ? Si un morceau décidait de se rebeller, c'est toute la tour qui va s'effondre comme un château de cartes. Pas vraiment la recette de la tranquillité technologique, n'est-ce pas ? En réponse à ce problème critique, l'entreprise a fait ses adieux solennels à l'ère monolithique, comprenant les périls qu'elle présentait, et a entamé son voyage vers une architecture de <>microservices<>, pièce par pièce.",
+                    "text_2": "Mon aventure chez BizBizShare, qui s'étendait d'<>août 2020<> à <>novembre 2021<>, a commencé avec un objectif clair : reconstruire l'interface de la place de marché et le panneau d'administration en utilisant le trio dynamique de <>React<>, <>Redux<>, et <>Vue.js<>. Notre équipe se composait de seulement trois développeurs : un professionnel expérimenté Full-Stack avec trois ans d'expérience, un génie du backend à temps partiel jonglant avec ses études universitaires, et moi-même, le seul génie de React. Nous étions une équipe jeune et dynamique, tous autour de l'âge mûr de 24 ans.",
+                    "text_3": "Au fil du temps, j'ai réalisé qu'être le seul guerrier du front-end signifiait souvent que j'étais le dernier à livrer les fonctionnalités. Parfois, tout s'emboîtait parfaitement, mais il y avait ces nuits palpitantes où le café coulait à flot parce qu'une réunion avec clients s'approchait à grands pas. Étrangement, j'appréciais cette excitation, mais je désirais aussi la tranquillité. C'est alors que j'ai pris délibérément la décision de plonger profondément dans le fonctionnement interne de l'<>API<> qui alimentait notre front-end, créée à l'aide de <>NodeJS<> et de <>MySQL<>. En m'immergeant dans le développement du back-end, j'ai pu relier harmonieusement les points entre le front-end et le back-end, évoluant finalement vers un développeur <>Full-Stack<>. Par conséquent, en août 2021, nous avons réussi à démanteler la dernière pièce du puzzle monolithique. Je tiens à exprimer ma profonde gratitude envers mes incroyables collègues pour leur soutien indéfectible lors de ce parcours tumultueux de croissance et de développement."
                 },
                 "marketplaces": {
                     "title": "Marketplaces",
                     "cta": "Visiter",
                     "bizbizshare": {
-                        "description": "Bizbizshare, the in-house marketplace, prides itself on offering a unique specialization. It strive to provide a wide range of offerings, primarily focusing on warehouse inventory, equipment, real estate, human resources, and electronics."
+                        "description": "Bizbizshare, le marketplace interne, se distingue en offrant une spécialisation unique. Elle s'efforce de proposer une large gamme d'offres, se concentrant principalement sur l'inventaire d'entrepôt, l'équipement, l'immobilier, les ressources humaines et l'électronique."
                     },
                     "ben": {
-                        "description": "The Business Exchange Network, BEN, is a marketplace powered by the US Green Chamber of Commerce. It serves as a versatile gateway to numerous categories, meeting your diverse needs across the United States and worldwide."
+                        "description": "Le Business Exchange Network, BEN, est un marketplace alimenté par la Chambre de Commerce Verte des États-Unis. Il sert de passerelle polyvalente vers de nombreuses catégories, répondant à vos besoins variés aux États-Unis et dans le monde entier."
                     },
                     "circular": {
-                        "description": "Circular Sharing stands as a prominent marketplace with a primary focus on Western Canada. Staying true to its name, its overarching mission revolves around empowering and nurturing an eco-friendly economy within the region."
+                        "description": "Circular Sharing se positionne comme un marketplace de premier plan, mettant l'accent principalement sur l'ouest du Canada. Restant fidèle à son nom, sa mission globale tourne autour de l'autonomisation et de l'encouragement d'une économie respectueuse de l'environnement dans la région."
                     },
                     "espaces": {
-                        "description": "Espaces et Cie primarily centers its efforts on revitalizing Montreal's downtown area. With a core mission to promote and facilitate office space rental, it caters to the diverse needs of businesses in terms of size, type, and specific requirements."
+                        "description": "Espaces et Cie concentre principalement ses efforts sur la revitalisation du centre-ville de Montréal. Avec pour mission centrale de promouvoir et faciliter la location d'espaces de bureau, l'entreprise répond aux besoins variés des entreprises en termes de taille, de type et d'exigences spécifiques."
                     }
                 },
                 "achievements": {
-                    "title": "Accomplissements"
+                    "title": "Accomplissements",
+                    "introduction": "J'ai eu le privilège de travailler dans un environnement enrichissant qui a encouragé ma croissance personnelle et professionnelle. Avec une passion pour l'innovation et un engagement envers l'excellence, j'ai accompli de nombreuses réalisations durant mes années à BizbizShare : ",
+                    "text1": {
+                        "title": "Nouvelle interface",
+                        "content": "i réussi à revitaliser l'interface de la place de marché avec React et Redux, réalisant cela en moins d'un an en tant que seul développeur front-end."
+                    },
+                    "text2": {
+                        "title": "Tableau de bord administrateur",
+                        "content": "J'ai réussi à reconstruire le panneau d'administration en utilisant Vue.js, créant ainsi un centre de contrôle efficace et convivial pour des opérations simplifiées."
+                    },
+                    "text3": {
+                        "title": "Solutions Web sur Mesure",
+                        "content": "J'ai conceptualisé et construit une application web sur mesure de bout en bout, répondant aux besoins uniques de notre client en connectant parfaitement leur API à la place de marché tout en mettant en œuvre des fonctionnalités spécialisées."
+                    },
+                    "text4": {
+                        "title": "Combler le fossé.",
+                        "content": "J'ai joué un rôle clé dans la maintenance et l'amélioration de l'API principale, agissant en tant que lien essentiel unissant les systèmes frontend et backend, garantissant ainsi des performances et des fonctionnalités optimales."
+                    }
                 }
             }
         },
         "mphase": {
-            "tagline": "Voluptatem dignissimos sequi modi, ratione accusantium nihil iste, expedita numquam nam esse odit pariatur quasi, vitae amet? A saepe vitae animi error voluptates facere ipsa id enim vel assumenda dolorum perferendis quos architecto voluptas, doloribus cumque magnam neque"
+            "tagline": "En tant que développeur chez mPhase, nous avons le privilège de travailler sur une grande variété de projets internes, répondant aux besoins de milliers d'utilisateurs quotidiens. De plus, nous offrons nos services à des clients, ce qui nous permet de nous aventurer dans divers secteurs et industries. Cet environnement de travail dynamique est vraiment remarquable ; chaque jour apporte de nouveaux défis et opportunités, en faisant une expérience en constante évolution et au rythme rapide.",
+            "page": {
+                "about": {
+                    "title": "À propos de mPhase",
+                    "text_1": "mPhase est une startup basée à Montréal. La société s'engage non seulement à développer des produits pour ses clients, mais a également créé avec succès ses propres produits propriétaires. J'ai rejoint l'équipe de mPhase en <>novembre 2021<> et je suis toujours un membre actif de l'organisation. Notre équipe se compose d'environ 10 développeurs, dont certains se spécialisent dans des domaines spécifiques tels que le <>développement mobile<> ou le <>back-end<>, tandis que la majorité, y compris moi-même, sont des développeurs Full Stack impliqués dans divers projets. Mon expérience au sein de cette entreprise a été cruciale dans mon développement en tant que <>développeur Full Stack<>.",
+                    "text_2": "Nous suivons la méthodologie <>agile SCRUM<>, progressant d'un sprint à l'autre, et nous assurons une planification de projet complète, des revues et des réunions quotidiennes. Pour faciliter cela, nous nous appuyons sur une gamme d'outils tels que <>Confluence<>, <>Jira<>, <>Bitbucket<>, et <>Github<>. Chacun de nos dépôts a son propre pipeline, nous permettant d'atteindre une intégration continue et une livraison continue (<>CI/CD<> en anglais) fluide.",
+                    "text_3": "Au quotidien, mon travail consiste à me plonger dans plusieurs projets hébergés dans différents dépôts, chacun fonctionnant dans des environnements distincts et utilisant un large éventail de technologies. Cette pile technologique va d'<>Angular<>, <>Node.js<>, et <>MongoDB<> à <>React<> et <>React Native<>. Gérer des tâches qui englobent les revues de code, l'assurance qualité et le développement fait partie intégrante de notre routine, il est donc juste de dire que le multitâche est devenu notre seconde nature."
+                },
+                "projects": {
+                    "title": "Projets",
+                    "mtransport": {
+                        "text": "mTransport, notre solution interne, sert quotidiennement des milliers d'utilisateurs. Il s'agit d'un système complet pour les écoles, offrant un suivi en temps réel des bus via un site web convivial pour les clients et les institutions. Les étudiants sont équipés de leurs propres cartes QR code pour un embarquement efficace. Les conducteurs de bus utilisent une application mobile pour scanner ces cartes, accédant aux détails du trajet pour un voyage sans heurts. Les parents reçoivent des notifications via l'application mobile pour plus de commodité. C'est l'avenir du transport scolaire."
+                    },
+                    "astus": {
+                        "text": "Nous travaillons actuellement sur AstusELD, un projet de Dispositif d'Enregistrement Électronique (ELD) pour le groupe Astus. Cette initiative vise à améliorer la sécurité des conducteurs et à simplifier le suivi, la gestion et le partage des enregistrements de l'état de service. Cela présente des défis uniques, notamment en raison de la nécessité de certification conforme aux lois et réglementations pertinentes. Notre rôle consiste à développer une application mobile basée sur React Native et Typescript, garantissant une expérience fluide et efficace pour les conducteurs dans l'exécution de leurs tâches et responsabilités quotidiennes."
+                    },
+                    "scoola": {
+                        "text": "Scoola, l'un de nos projets internes, est sur le point d'être lancé. Ce système complet est spécialement conçu pour aider les établissements de garde d'enfants. Il donne aux employés des garderies un accès facile à la liste quotidienne des enfants qui leur sont assignés. Parallèlement, les responsables disposent d'un site web dédié pour superviser efficacement le statut de chaque groupe, garantissant que le ratio enfants-encadrants soit maintenu à des niveaux optimaux. De plus, les parents sont une partie intégrante de cet écosystème grâce à leur propre application mobile."
+                    }
+                }
+            }
         },
         "naia": {
-            "tagline": "Voluptatem dignissimos sequi modi, ratione accusantium nihil iste, expedita numquam nam esse odit pariatur quasi, vitae amet? A saepe vitae animi error voluptates facere ipsa id enim vel assumenda dolorum perferendis quos architecto voluptas, doloribus cumque magnam neque"
+            "tagline": "NAIA, également connu sous le nom de North American Immigration Agency, est en train de développer une solution sur mesure conçue spécifiquement pour les cabinets d'avocats spécialisés en immigration opérant au Canada et aux États-Unis. Son objectif principal est d'améliorer la gestion des documents à chaque étape du processus d'immigration.",
+            "page": {
+                "about": {
+                    "title": "À propos de NAIA",
+                    "text_1": "Je travaille actuellement sur une plateforme web pour NAIA, qui signifie North American Immigration Agency. C'est un projet assez fascinant que j'ai entrepris pendant mes temps libres. Pour vous donner un aperçu des coulisses, je suis le seul développeur chargé de concevoir la plateforme. Cela implique la conception de l'interface utilisateur, la mise en place des composants web en utilisant <>React<> et <>Typescript<>, ainsi que la construction de l'API REST essentielle avec <>NodeJs<>, <>MongoDB<>, et <>Google Cloud Storage<>. Nous déployons sur Heroku, et nous avons mis en place un pipeline automatique <>CI/CD<> géré par Bitbucket.",
+                    "text_2": "L'objectif principal est d'améliorer la gestion des documents pour les personnes engagées dans des procédures d'immigration au <>Canada<> ou aux <>États-Unis<>. Il s'agit de simplifier le processus, souvent fastidieux, de collecte et d'identification des documents manquants ou invalides. Actuellement, tous ces documents sont stockés directement dans <>Google Drive<>, accessibles aux clients, aux employés et aux avocats. Le résultat ? Imaginez une situation où tout le monde fouille dans un tas de papiers virtuel - bien loin d'une expérience agréable.",
+                    "text_3": "La plateforme s'adresse à <>4 types<> d'utilisateurs, chacun ayant des rôles et des accès uniques. Heureusement, j'ai obtenu l'autorisation de vous offrir un aperçu de la plateforme en action sur notre environnement de pré-production - considérez-le comme notre <>terrain de jeu virtuel<>. Vous êtes encouragé à <>explorer<> et à <>tester<> chaque fonctionnalité sans hésitation. Il vous suffit de cliquer sur le bouton de connexion correspondant au rôle que vous avez choisi, et voilà ! Vous serez instantanément transporté dans la plateforme."
+                },
+                "roles": {
+                    "title": "Les utilisateurs de NAIA",
+                    "admin": {
+                        "title": "Administrateur",
+                        "text": "L'administrateur bénéficie de privilèges étendus, ayant l'autorité exclusive d'ajouter, de mettre à jour ou de supprimer des employés selon les besoins. À l'intérieur du système, ils ont un accès illimité à tous les dossiers d'immigration. De plus, dans un avenir proche, le rôle d'administrateur englobera également la gestion des organisations lorsque la plateforme s'étendra pour proposer une solution de marque blanche."
+                    },
+                    "lawyer": {
+                        "title": "Avocat",
+                        "text": "Les avocats opèrent dans un domaine plus spécialisé. Leur accès est limité uniquement aux dossiers d'immigration qui leur ont été attribués. Il est important de noter que chaque dossier d'immigration doit avoir au moins un avocat assigné. Bien que les avocats aient la possibilité de créer de nouveaux dossiers d'immigration, leur champ d'action ne s'étend pas aux fonctions de gestion des employés."
+                    },
+                    "employee": {
+                        "title": "Employé",
+                        "text": "Les employés, en tant que pierre angulaire de la structure opérationnelle, ont un champ d'accès spécifique. Ils sont limités aux dossiers d'immigration qui leur sont spécifiquement attribués. En tant que pilier de la gestion des dossiers, leurs responsabilités tournent principalement autour de guider et faciliter le dossier à travers ses différentes étapes procédurales."
+                    },
+                    "client": {
+                        "title": "Client",
+                        "text": "Les clients bénéficient d'une interface simplifiée qui leur donne accès uniquement à leurs domaines désignés et à leurs documents pertinents. Cette perspective personnalisée est conçue pour offrir aux clients une expérience conviviale, facilitant le suivi direct des dossiers et le téléchargement sans problème des documents nécessaires lorsque le besoin se présente."
+                    },
+                    "login": "Se connecter"
+                }
+            }
         }
     }
 }

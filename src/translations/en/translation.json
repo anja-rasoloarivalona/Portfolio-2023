@@ -1,4 +1,12 @@
 {
+    "about": {
+        "title": "I just caught fire coding.",
+        "text_1": "Ever since I became a Full-Stack developer, work doesn't feel like work anymore—it's a daily dose of joy! Coding isn't just a <>passion<>; it's an <>obsession<> that has me counting down the hours on Friday evenings, eagerly awaiting Monday to dive back in. Yep, I'm that crazy about coding!",
+        "text_2": "Now, a little backstory: I hail from <>Madagascar<>. Back in 2014, I aced my French Baccalaureate with mathematics as my major. After that, I joined <>HEC Montreal<> for a <>Bachelor of Business Administration<>. Finance was my initial choice, but turns out, numbers alone weren't cutting it. That's when I transitioned to combining Finance with <>Information Technology<>. During my final two years, I stumbled upon IT projects from a business perspective, but it was only in my last semester, in 2018, that I took my first programming course. And bam! It hit me like a drumroll of lightning—I'd found my calling, a blend of <>creativity<> and <>problem-solving<> that set my soul on fire. I was up until 3am tackling coding challenges, driven by an inner spark.",
+        "text_3": "Reality hit soon after graduation. I needed a job, and getting hired as a junior developer with just one course under my belt was a tall order. So, I became a Customer Manager for a French startup, but deep down, coding was my true love. Cue the <>self-taught<> grind: work all day, code all night.",
+        "text_4": "Then 2020 happened—the year the world hit pause, thanks to Covid-19. I lost my job, but I also had family responsibilities. So, during lock down, I doubled down on my efforts. A few months later, I landed my first gig as a developer.",
+        "text_5": "My years at <>Bizbishare<> were transformative. I grew, evolved, and became a confident <>Full-Stack developer<>. Armed with this knowledge, I then joined <>mPhase<>, diving into various projects in an <>agile<> environment. Now, I can whip up digital products from scratch to finish, just like I did with the <>NAIA<> platform. To the person who nudged me toward Finance and Information Technology at university—thank you a million times over! You set me on this incredible coding adventure, and I haven't looked back since!"
+    },
     "form": {
         "cta": "Send message",
         "title": "I'm excited to learn about your project. Ready to get started?",
@@ -19,6 +27,12 @@
         "visit_website": "Visit website"
     },
     "homepage": {
+        "about": {
+            "cta": "Learn more",
+            "text_1": "Greetings and welcome to my portfolio! My name is <>Anja<>, and I'm thrilled that you're taking the time to explore my work. I call Antananarivo, the vibrant capital of <>Madagascar<>, my hometown. Currently, I am deeply immersed in the world of technology as a <>Full-Stack developer<> at mPhase.",
+            "text_2": "My journey to this position has been nothing short of an exhilarating roller coaster ride. To be completely honest, the path to becoming a developer was not one I had initially envisioned. Life took me on unexpected turns and introduced me to the exciting realm of <>coding and development<>. I'm truly grateful for the opportunities that have come my way, and I'm eager to share my experiences and creations with you. <>Thank you<> once again for your visit, and I hope you enjoy exploring my work!",
+            "title": "About me"
+        },
         "contact": {
             "cta": "Let's do this",
             "text": "Interested in working together? We should queue up a chat. I'll buy the coffee.",
@@ -28,7 +42,25 @@
             "cta": "Contact",
             "intro": "Hi, my name is",
             "text": "I am a Full-Stack Developer"
+        },
+        "skills": {
+            "frontend": {
+                "title": "Front-End",
+                "description": "I enjoy Front-end development. I get a lot of satisfaction when I see a product coming to life on my screen."
+            },
+            "backend": {
+                "title": "Back-End",
+                "description": "I enjoy crafting and maintaining APIs that meet industry standards. Data integrity is vital in my work."
+            },
+            "tools": {
+                "title": "Tools & Workflow",
+                "description": "Here is a list of tools and workflow that I have been using professionally and personally so far."
+            }
         }
+    },
+    "landing": {
+        "title": "Unleashing digital potential",
+        "cta": "Let's begin"
     },
     "projects": {
         "bizbizshare": {
@@ -36,9 +68,9 @@
             "page": {
                 "about": {
                     "title": "About Bizbizshare",
-                    "text_1": "When I joined BizbizShare, our tech setup resembled a colossal Jenga tower built entirely from vintage JAVA blocks. Picture this: it had the Herculean task of juggling authentication, subscriptions, data analysis, elasticsearch, payments, client and admin interface – you name it! The catch? If one piece decided to rebel, it sent the entire tower tumbling down like a house of cards. Not exactly a recipe for tech tranquility, right?  In response to this critical issue. the company bid a solemn farewell to the monolithic era, understanding the perils it posed as it's started its journey towards a microservices architecture, piece by piece.",
-                    "text_2": "My adventure at BizBizshare, spanning from August 2020 to November 2021,  started with a clear goal: rebuild the marketplace interface and admin pannel using the dynamic trio of React, Redux, and Vue.js. Our squad consisted of just three developers - one seasoned full-stack pro with three years under their belt, a part-time backend whiz who was juggling university studies, and yours truly, the only React mastermind. We were a young and vibrant team, all hovering around the ripe age of 24.",
-                    "text_3": "As time ticked on, I realized that being the sole front-end warrior often meant I was last in line to deliver features. Sometimes, things clicked seamlessly, but there were those hair-raising nights when we burned the midnight oil because a client meeting was looming on the horizon. Oddly enough, I relished the thrill, but I yearned for tranquility too. That's when I made a deliberate move to delve deep into the inner workings of the API that fueled our front-end, crafted using NodeJS and MySQL. By immersing myself in back-end development, I could smoothly connect the dots between the front and back ends, ultimately evolving into a genuine Full-Stack enthusiast. Consequently, come August 2021, we successfully dismantled the final piece of the monolithic puzzle. I extend heartfelt gratitude to my incredible colleagues for their unwavering support on this rollercoaster ride of growth and development."
+                    "text_1": "BizbizShare specializes in circular economy <>marketplaces<>. They run their own marketplace and offer white-label solutions, all managed by a single codebase. When I joined the company, our tech setup resembled a colossal <>Jenga<> tower built entirely from vintage <>JAVA<> blocks. Picture this: it had the Herculean task of juggling authentication, subscriptions, data analysis, elasticsearch, payments, client and admin interface – you name it! The catch? If one piece decided to rebel, it sent the entire tower tumbling down like a house of cards. Not exactly a recipe for tech tranquility, right?  In response to this critical issue. the company bid a solemn farewell to the monolithic era, understanding the perils it posed as it's started its journey towards a <>microservices architecture<>, piece by piece.",
+                    "text_2": "My adventure at BizBizshare, spanning from <>August 2020<> to <>November 2021<>,  started with a clear goal: rebuild the marketplace interface and admin panel using the dynamic trio of <>React<>, <>Redux<>, and <>Vue.js<>. Our squad consisted of just three developers - one seasoned full-stack pro with three years under their belt, a part-time backend whiz who was juggling university studies, and yours truly, the only React mastermind. We were a young and vibrant team, all hovering around the ripe age of 24.",
+                    "text_3": "As time ticked on, I realized that being the sole front-end warrior often meant I was last in line to deliver features. Sometimes, things clicked seamlessly, but there were those hair-raising nights when we burned the midnight oil because a client meeting was looming on the horizon. Oddly enough, I relished the thrill, but I yearned for tranquility too. That's when I made a deliberate move to delve deep into the inner workings of the <>API<> that fueled our front-end, crafted using <>NodeJS<> and <>MySQL<>. By immersing myself in back-end development, I could smoothly connect the dots between the front and back ends, ultimately evolving into a <>Full-Stack developer<>. Consequently, come August 2021, we successfully dismantled the final piece of the monolithic puzzle. I extend heartfelt gratitude to my incredible colleagues for their unwavering support on this rollercoaster ride of growth and development."
                 },
                 "marketplaces": {
                     "title": "Marketplaces",
@@ -58,7 +90,7 @@
                 },
                 "achievements": {
                     "title": "Achievements",
-                    "introduction": "I've had the privilege of working in a rewarding environment that fostered personal and professional growth. With a passion for innovation and a commitment to excellence, I've accomplished numerous achievements",
+                    "introduction": "I've had the privilege of working in a rewarding environment that fostered personal and professional growth. With a passion for innovation and a commitment to excellence, I've accomplished numerous achievements: ",
                     "text1": {
                         "title": "New Marketplace Interface",
                         "content": "I successfully revamped the marketplace interface with React and Redux, accomplishing this within less than a year as the sole front-end developer."
@@ -83,8 +115,9 @@
             "page": {
                 "about": {
                     "title": "About mPhase",
-                    "text_1": "I became a part of mPhase in November 2021, and I'm currently still with the company. Our team comprises approximately 10 developers, with some specializing in specific areas such as Mobile Development or Back-end, while the majority, including myself, are Full Stack developers engaged in a variety of projects. It's within the confines of this company that I've had the invaluable opportunity to flourish as a Full Stack developer.",
-                    "text_2": "On a day-to-day basis, my work entails diving into multiple projects housed in different repositories, each operating in distinct environments and utilizing a wide spectrum of technologies. This spectrum ranges from Angular, Express.js, and MongoDB, to React and React Native. Juggling tasks that include code reviews, quality assurance, and development, it's safe to say that multitasking is second nature to us."
+                    "text_1": "mPhase is a Montreal-based startup. The company is not only committed to developing products for clients but has also successfully created its own proprietary products. I became a part of the mPhase team in <>November 2021<> and continue to be an active member of the organization. Our team consists of approximately 10 developers, with some specializing in specific areas like <>Mobile Development<> or <>Back-end<>, while the majority, including myself, are Full Stack developers involved in various projects. My time at this company has been instrumental in my growth as <>a Full Stack developer.<>",
+                    "text_2": "We follow the <>agile SCRUM methodology<>, progressing from one sprint to another, and ensuring comprehensive project planning, reviews, and daily meetings. To facilitate this, we rely on a range of tools such as <>Confluence<>, <>Jira<>, <>Bitbucket<>, and <>Github<>. Each of our repositories has its own pipeline, enabling us to achieve seamless <>CI/CD<> integration.",
+                    "text_3": "On a typical day, my work involves immersing myself in multiple projects hosted in different repositories, each operating within distinct environments and employing a wide array of technologies. This technology stack spans from <>Angular<>, <>Node.js<>, and <>MongoDB<> to <>React<> and <>React Native<>. Managing tasks that encompass code reviews, quality assurance, and development, it's fair to say that multitasking has become second nature to us."
                 },
                 "projects": {
                     "title": "Projects",
@@ -101,8 +134,35 @@
             }
         },
         "naia": {
-            "tagline": "Voluptatem dignissimos sequi modi, ratione accusantium nihil iste, expedita numquam nam esse odit pariatur quasi, vitae amet? A saepe vitae animi error voluptates facere ipsa id enim vel assumenda dolorum perferendis quos architecto voluptas, doloribus cumque magnam neque"
+            "tagline": "NAIA, also known as North American Immigration Agency, is currently building  a tailored solution designed specifically for immigration law firms operating in both Canada and the United States. Its primary objective is to enhance document management throughout every stage of the immigration process.",
+            "page": {
+                "about": {
+                    "title": "About NAIA",
+                    "text_1": "I'm currently working on a web platform for NAIA, which stands for North American Immigration Agency. It's a rather fascinating project that I've taken on during my free time. To give you a glimpse behind the scenes, I'm the sole developer responsible for crafting the platform. This involves designing the user interface, implementing the web components using <>React<> and <>Typescript<>, and building the essential REST API with <>NodeJs<>, <>MongoDB<>, and <>Google Cloud storage<>. Our deployment is on Heroku, and we've got a nifty automatic <>CI/CD<> pipeline managed by Bitbucket, our repository host.",
+                    "text_2": "The primary goal is to enhance document management for individuals pursuing immigration cases in <>Canada<> or the <>United States<>. It's all about streamlining the often cumbersome process of gathering, identifying missing or invalid documents. Currently, all these documents are housed directly in <>Google Drive<>, accessible to clients, employees, and lawyers alike. The result? Picture a scenario where everyone's diving into a virtual paper pile – not exactly a smooth sailing experience.",
+                    "text_3": "The platform caters to <>4 types<> of users, each with their unique roles and access. Luckily, I've been granted permission to provide you with a sneak peek of the platform in action on our staging environment – consider it our <>virtual playground<>. You're encouraged to <>explore<> and <>test<> any feature without hesitation. Simply click on the login button corresponding to the role you've chosen, and voilà! You'll be seamlessly whisked into the platform."
+                },
+                "roles": {
+                    "title": "NAIA users",
+                    "admin": {
+                        "title": "Admin",
+                        "text": "The admin enjoys extensive privileges, holding exclusive authority to add, update, or remove employees as needed. Within the system, they possess unrestricted access to all immigration cases. Additionally, in the foreseeable future, the admin role will encompass the management of organizations when the platform expands to offer a white label solution."
+                    },
+                    "lawyer": {
+                        "title": "Lawyer",
+                        "text": "Lawyers operate within a more specialized realm. Their access is limited solely to the immigration cases they have been assigned to handle. It's worth noting that each immigration case is required to have at least one lawyer assigned to it. While lawyers do have the capability to initiate new immigration cases, their purview does not extend to employee management functions."
+                    },
+                    "employee": {
+                        "title": "Employee",
+                        "text": "Employees, being the foundation of the operational structure, have a focused scope of access. They are confined to the immigration cases specifically assigned to them. As the backbone of case management, their responsibilities predominantly revolve around guiding and facilitating the case through its various procedural stages."
+                    },
+                    "client": {
+                        "title": "Client",
+                        "text": "Clients are provided with a simplified interface, granting them access solely to their designated areas and their own pertinent documents. This tailored perspective is designed to offer clients a user-friendly experience, facilitating straightforward case tracking and the seamless uploading of necessary documents when the need arises."
+                    },
+                    "login": "Login"
+                }
+            }
         }
-    },
-    "test": "{{name}} is {{object}}."
+    }
 }

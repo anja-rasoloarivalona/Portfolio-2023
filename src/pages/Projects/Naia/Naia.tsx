@@ -8,12 +8,10 @@ const Naia = () => {
     const project = useMemo(() => config.projects.get(ProjectId.NAIA)!, []);
 
     return (
-        <>
-            <ProjectWrapper project={project}>
-                <NaiaAbout />
-                <NaiaRoles />
-            </ProjectWrapper>
-        </>
+        <ProjectWrapper project={project}>
+            <NaiaAbout />
+            <NaiaRoles />
+        </ProjectWrapper>
     );
 };
 

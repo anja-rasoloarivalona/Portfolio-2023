@@ -1,14 +1,6 @@
 import React from 'react';
-import {
-    Container,
-    Content,
-    ContentIntro,
-    ContentList,
-    ContentListItem,
-    ContentListItemLabel,
-    ContentListItemText,
-} from './BizbishareAchivements-styles';
-import { Title } from '../../../../../components';
+import { Container, Content, ContentList, ContentListItem } from './BizbishareAchivements-styles';
+import { Paragraph, Text, Title } from '../../../../../components';
 import { useTranslation } from 'react-i18next';
 import { ResourceKey } from 'i18next';
 
@@ -18,25 +10,25 @@ const BizbizshareAchievements = () => {
         <Container>
             <Title isCentered={false}>{t('projects.bizbizshare.page.achievements.title')}</Title>
             <Content>
-                <ContentIntro>{t('projects.bizbizshare.page.achievements.introduction')}</ContentIntro>
+                <Paragraph>{t('projects.bizbizshare.page.achievements.introduction')}</Paragraph>
                 <ContentList>
                     {Array.from({ length: 4 }, (_, index) => index).map((_, index) => (
                         <ContentListItem key={index}>
-                            <ContentListItemLabel>
+                            <Text primary>
                                 {t(
                                     `projects.bizbizshare.page.achievements.text${
                                         index + 1
                                     }.title` as ResourceKey
                                 )}
-                            </ContentListItemLabel>
-                            : &nbsp;
-                            <ContentListItemText>
+                                : &nbsp;
+                            </Text>
+                            <Text>
                                 {t(
                                     `projects.bizbizshare.page.achievements.text${
                                         index + 1
                                     }.content` as ResourceKey
                                 )}
-                            </ContentListItemText>
+                            </Text>
                         </ContentListItem>
                     ))}
                 </ContentList>

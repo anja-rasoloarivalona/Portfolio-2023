@@ -21,4 +21,11 @@ export const ListItem = styled.li`
     :hover {
         color: ${({ theme }) => theme.colors.primary.main};
     }
+
+    a {
+        color: ${({ theme }) => theme.colors.onSurface} !important;
+        :hover {
+            color: ${({ theme }) => theme.colors.primary.main} !important;
+        }
+    }
 `;

@@ -4,11 +4,12 @@ import { Bar, Container, Text } from './Title-styles';
 type TitleProps = {
     children: React.ReactNode;
     isCentered?: boolean;
+    expandBottomSpace?: boolean;
 };
 
-const Title = ({ children, isCentered = true }: TitleProps) => {
+const Title = ({ children, isCentered = true, expandBottomSpace = false }: TitleProps) => {
     return (
-        <Container isCentered={isCentered}>
+        <Container isCentered={isCentered} expandBottomSpace={expandBottomSpace}>
             {isCentered && <Bar />}
             <Text>{children}</Text>
             <Bar />

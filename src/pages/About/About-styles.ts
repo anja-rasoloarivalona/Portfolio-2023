@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     ${({ theme }) => theme.config.grid.default};
-    padding-top: ${({ theme }) => theme.config.header.height.default};
     background-color: ${({ theme }) => theme.colors.background};
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: ${({ theme }) => theme.box.spacing.xl};
 `;
 
 export const Container = styled.div`
     grid-column: 3 / 4;
-    padding-top: ${({ theme }) => theme.box.spacing.xl};
+    padding-top: ${({ theme }) => theme.box.spacing.md};
 `;
 
 export const ImageContainer = styled.div`
@@ -44,6 +44,10 @@ export const Image = styled.img`
 export const Content = styled.div`
     padding-top: ${({ theme }) => theme.box.spacing.xxl};
     padding-left: 10rem;
+
+    p {
+        margin-bottom: ${({ theme }) => theme.box.spacing.md};
+    }
 `;
 
 export const ContentTitle = styled.h1`
@@ -51,12 +55,4 @@ export const ContentTitle = styled.h1`
     color: ${({ theme }) => theme.colors.primary.main};
     line-height: 1.1;
     margin-bottom: ${({ theme }) => theme.box.spacing.lg};
-`;
-
-export const ContentText = styled.p`
-    font-size: ${({ theme }) => theme.font.size.md};
-    color: ${({ theme }) => theme.colors.onBackground};
-    line-height: 1.4;
-    margin-bottom: ${({ theme }) => theme.box.spacing.lg};
-    text-align: justify;
 `;

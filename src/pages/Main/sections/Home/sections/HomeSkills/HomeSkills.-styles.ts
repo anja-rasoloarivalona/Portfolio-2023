@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
     grid-column: 1 / -1;
-    min-height: 100vh;
     width: 100%;
     ${({ theme }) => theme.config.grid.default};
+    margin-bottom: ${({ theme }) => theme.box.spacing.xxxl};
 `;
 
 export const List = styled.ul`
@@ -12,7 +12,7 @@ export const List = styled.ul`
     grid-column: 3 / 4;
 `;
 
-export const ListItem = styled.li`
+export const ListItem = styled.li<{ isDisplayed: boolean; isDisabled: boolean; index: number }>`
     flex: 1;
     background-color: ${({ theme }) => theme.colors.surface};
     padding: ${({ theme }) => theme.box.spacing.md};
@@ -20,12 +20,32 @@ export const ListItem = styled.li`
     flex-direction: column;
     align-items: center;
     transition: all 1s ease-in-out;
+    transition-delay: ${({ index }) => `${index * 0.5}s`};
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(5rem) scale(0.8);
 
     &:nth-child(2) {
         margin: 0 ${({ theme }) => theme.box.spacing.lg};
     }
+
+    ${({ isDisplayed, isDisabled }) => {
+        if (isDisabled) {
+            return {
+                opacity: 1,
+                scale: 1,
+                transform: 'translateY(0%) scale(1)',
+                transition: 'none',
+            };
+        }
+
+        if (isDisplayed) {
+            return {
+                opacity: 1,
+                scale: 1,
+                transform: 'translateY(0%) scale(1)',
+            };
+        }
+    }}
 `;
 
 export const ListItemIcon = styled.div`

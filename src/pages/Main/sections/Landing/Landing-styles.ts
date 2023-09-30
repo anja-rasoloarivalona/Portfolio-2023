@@ -49,5 +49,5 @@ export const loadAnimation = keyframes`
 `;
 
 export const loadStylesAnimation = css`
-    animation: ${loadAnimation} 2s ease-in-out 2s forwards;
+    animation: ${loadAnimation} 1s ease-in-out 0s forwards;
 `;

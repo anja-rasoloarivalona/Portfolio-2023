@@ -1,18 +1,30 @@
 import React from 'react';
 import { config } from '../../../../../../config/main';
 import { Container } from './HomeProjects-styles';
-import { Title } from '../../../../../../components';
+import { ProjectCard, Title } from '../../../../../../components';
 import { useTranslation } from 'react-i18next';
-import { HomeProject } from './components';
+import Scroll from 'react-scroll';
 
 const HomeProjects = () => {
     const { t } = useTranslation();
 
     return (
-        <Container>
-            <Title isCentered={false}>{t('generic.my_works')}</Title>
+        <Container id="works">
+            <Scroll.Element name="#works" />
+
+            <Title isCentered={false} expandBottomSpace>
+                {t('generic.my_works')}
+            </Title>
             {[...config.projects.values()].map((project, index) => (
-                <HomeProject project={project} index={index} />
+                <ProjectCard
+                    key={project.id}
+                    title={project.companyName}
+                    subTitle={project.post as string}
+                    description={`projects.${project.translationKey}.tagline`}
+                    image={project.image}
+                    path={project.path}
+                    index={index}
+                />
             ))}
         </Container>
     );

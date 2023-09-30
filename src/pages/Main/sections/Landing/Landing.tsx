@@ -2,20 +2,20 @@ import React from 'react';
 import { Container } from './Landing-styles';
 import LandingBackground from './LandingBackground';
 import LadingForeground from './LadingForeground';
+import { DISPLAY_STATE } from '../../../../types';
 
 type LandingProps = {
     onClickLandingCta: () => void;
+    displayState: DISPLAY_STATE;
 };
 
-const Landing = ({ onClickLandingCta }: LandingProps) => {
-    const text = 'Unleashing digital potential';
-
-    // const text = 'Donnez vie au numerique';
-
+const Landing = ({ onClickLandingCta, displayState }: LandingProps) => {
     return (
         <Container>
-            <LandingBackground text={text} onClickLandingCta={onClickLandingCta} />
-            <LadingForeground text={text} onClickLandingCta={onClickLandingCta} />
+            <LandingBackground onClickLandingCta={onClickLandingCta} displayState={displayState} />
+            {displayState === DISPLAY_STATE.LOADED && (
+                <LadingForeground onClickLandingCta={onClickLandingCta} />
+            )}
         </Container>
     );
 };

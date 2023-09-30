@@ -1,5 +1,4 @@
 export type Skill = {
-    title: string;
-    description: string;
+    id: string;
     list: Array<string>;
 };

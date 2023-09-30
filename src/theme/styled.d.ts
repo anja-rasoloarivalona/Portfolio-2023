@@ -4,6 +4,7 @@ declare module 'styled-components' {
     export interface DefaultTheme {
         box: {
             spacing: {
+                xxxl: string;
                 xxl: string;
                 xl: string;
                 lg: string;
@@ -30,6 +31,7 @@ declare module 'styled-components' {
             background: string;
             onBackground: string;
             onBackgroundDark: string;
+            onBackgroundHighlighted: string;
             surface: string;
             onSurface: string;
             onSurfaceDark: string;

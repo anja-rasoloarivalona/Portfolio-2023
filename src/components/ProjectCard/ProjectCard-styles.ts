@@ -5,13 +5,15 @@ export const Container = styled.div<{ isOdd: boolean }>`
     justify-content: flex-end;
     position: relative;
     height: 34rem;
-    margin-bottom: 20%;
+    &:not(:last-child) {
+        margin-bottom: ${({ theme }) => theme.box.spacing.xxxl};
+    }
 
     ${({ isOdd }) => {
         if (isOdd === true) {
             return {
                 justifyContent: 'flex-start',
-                '.image-container': {
+                '.project-card-image': {
                     left: 'unset',
                     right: 0,
                 },
@@ -97,14 +99,14 @@ export const Content = styled.div`
     }
 `;
 
-export const ContentPost = styled.h4`
+export const ContentSubtitle = styled.h4`
     font-size: ${({ theme }) => theme.font.size.lg};
     color: ${({ theme }) => theme.colors.primary.main};
 `;
 
-export const ContentCompanyName = styled.h1`
+export const ContentTitle = styled.h1`
     font-size: ${({ theme }) => theme.font.size.xxl};
-    color: ${({ theme }) => theme.colors.onBackground};
+    color: ${({ theme }) => theme.colors.onBackgroundHighlighted};
     line-height: 1.4;
 `;
 

@@ -9,6 +9,7 @@ export type AnimatedProps = {
     isTriggered?: boolean; // If true, the animation will be triggered
     triggerRef?: React.RefObject<HTMLDivElement>; // Ref to be used as trigger for animation
     triggerPosition?: number; // Scroll position at which the animation will trigger
+    useDarkBackground?: boolean;
 };
 
 const Animated = ({
@@ -17,6 +18,7 @@ const Animated = ({
     triggerPosition,
     isTriggered = false,
     isDisabled = false,
+    useDarkBackground = true,
     offset = 0,
 }: AnimatedProps) => {
     const scrollTriggered = useScrollTrigger({
@@ -34,6 +36,7 @@ const Animated = ({
                         key="slide"
                         playAnimation={isTriggered || scrollTriggered.isTriggered}
                         className="animated__slide"
+                        useDarkBackground={useDarkBackground}
                     />,
                 ]);
             }

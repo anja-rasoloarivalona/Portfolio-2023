@@ -23,7 +23,7 @@ export const projects: Map<ProjectId, Project> = new Map([
             path: RoutesPath.BIZBIZSHARE,
             image: bizbizshareImage,
             imageHero: bizbizshareImageHero,
-            websiteUrl: 'https://bizbizshare.com/',
+            websiteUrl: 'https://bizbizshare.com',
         },
     ],
     [
@@ -38,7 +38,7 @@ export const projects: Map<ProjectId, Project> = new Map([
             path: RoutesPath.MPHASE,
             image: mphaseImage,
             imageHero: mphaseImageHero,
-            websiteUrl: 'https://mphase.ca/',
+            websiteUrl: 'https://mphase.ca',
         },
     ],
     [
@@ -53,7 +53,8 @@ export const projects: Map<ProjectId, Project> = new Map([
             path: RoutesPath.NAIA,
             image: naiaImage,
             imageHero: naiaImageHero,
-            websiteUrl: 'https://staging-naia-web-91d64945f832.herokuapp.com/',
+            websiteUrl: 'https://staging-naia-web-91d64945f832.herokuapp.com',
+            // websiteUrl: 'http://localhost:3002',
         },
     ],
 ]);

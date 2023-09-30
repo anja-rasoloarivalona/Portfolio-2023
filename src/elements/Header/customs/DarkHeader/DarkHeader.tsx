@@ -1,7 +1,12 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import { AppContext } from '../../App';
+import { config } from '../../../../config/main';
 
-// styles and components
+// hooks
+import { useLocale, useScrollPosition } from '../../../../hooks';
+import { useWindowSize } from 'usehooks-ts';
+import { useLocation } from 'react-router-dom';
+
+// styles
 import {
     Container,
     Content,
@@ -11,29 +16,18 @@ import {
     ProjectList,
     ProjectListActiveIndicator,
     ProjectListItem,
-} from './Header-styles';
-import { Logo } from '../../components';
-import { HeaderMenuIcon, HeaderMenu, HeaderForm } from './components';
+} from './DarkHeader-styles';
+import { Logo } from '../../../../components';
+import { AppContext } from '../../../../App';
+import { HeaderForm, HeaderMenu, HeaderMenuIcon } from '../../components';
+import { MenuList } from '../../../../types';
 
-// hooks
-import { useLocale, useScrollPosition } from '../../hooks';
-import { useWindowSize } from 'usehooks-ts';
-import { useLocation } from 'react-router-dom';
-
-// types
-import { MenuList } from '../../types';
-import { config } from '../../config/main';
-
-type HeaderProps = {
-    isMainHeader?: boolean;
-};
-
-const Header = ({ isMainHeader = true }: HeaderProps) => {
+const DarkHeader = () => {
     const locale = useLocale();
-    const scrollPosition = useScrollPosition();
-    const windowSize = useWindowSize();
     const { pathname } = useLocation();
     const { openedMenu } = useContext(AppContext);
+    const scrollPosition = useScrollPosition();
+    const windowSize = useWindowSize();
     const [activeTabIndex, setActiveTabIndex] = useState(0);
     const [indicatorConfig, setIndicatorConfig] = useState({
         width: 0,
@@ -99,16 +93,14 @@ const Header = ({ isMainHeader = true }: HeaderProps) => {
     return (
         <Container
             id="app-header"
-            isMainHeader={isMainHeader}
+            className="app-header app-header--dark"
             isDisplayed={pathname !== '/' || openedMenu != null || scrollPosition >= windowSize.height}
-            useBackground={isMainHeader === true && pathname !== '/'}
-            disabledTransition={
-                isMainHeader === true && pathname === '/' && scrollPosition < windowSize.height
-            }
+            useBackground={pathname !== '/' && pathname !== '/about'}
+            disabledTransition={pathname === '/' && scrollPosition < windowSize.height}
         >
             <Content>
-                <Logo hasDarkBackground={isMainHeader || openedMenu != null} />
-                {isMainHeader && showProjectList && openedMenu == null && (
+                <Logo hasDarkBackground />
+                {showProjectList && openedMenu == null && (
                     <Links>
                         <PortfolioLink to="/">Portfolio</PortfolioLink>
                         <ProjectList>
@@ -121,16 +113,15 @@ const Header = ({ isMainHeader = true }: HeaderProps) => {
                         </ProjectList>
                     </Links>
                 )}
-                <HeaderMenuIcon isMainHeader={isMainHeader} isMenuOpened={openedMenu != null} />
+                <HeaderMenuIcon isMainHeader={true} isMenuOpened={openedMenu != null} />
             </Content>
-            {isMainHeader && (
-                <MenuContainer isDisplayed={openedMenu != null}>
-                    {openedMenu === MenuList.DEFAULT && <HeaderMenu />}
-                    {openedMenu === MenuList.FORM && <HeaderForm />}
-                </MenuContainer>
-            )}
+
+            <MenuContainer isDisplayed={openedMenu != null}>
+                {openedMenu === MenuList.DEFAULT && <HeaderMenu />}
+                {openedMenu === MenuList.FORM && <HeaderForm />}
+            </MenuContainer>
         </Container>
     );
 };
 
-export default Header;
+export default DarkHeader;

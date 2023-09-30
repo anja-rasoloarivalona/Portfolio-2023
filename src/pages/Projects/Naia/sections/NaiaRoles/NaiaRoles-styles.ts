@@ -1,23 +1,17 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    margin-bottom: 10%;
+export const List = styled.ul`
+    margin-top: ${({ theme }) => theme.box.spacing.xl};
 `;
-
-export const Text = styled.div`
-    font-size: ${({ theme }) => theme.font.size.lg};
-    color: ${({ theme }) => theme.colors.onSurface};
-    line-height: 1.6;
-    padding: ${({ theme }) => `${theme.box.spacing.lg} 0`};
-`;
-
-export const List = styled.ul``;
 
 export const ListItem = styled.li`
     padding: ${({ theme }) => theme.box.spacing.lg};
     background-color: ${({ theme }) => theme.colors.surface};
-    margin-bottom: ${({ theme }) => theme.box.spacing.xxl};
     border-radius: 0.5rem;
+
+    &:not(:last-child) {
+        margin-bottom: ${({ theme }) => theme.box.spacing.xl};
+    }
 `;
 
 export const ListItemHeader = styled.div`
@@ -43,14 +37,8 @@ export const ListItemHeaderText = styled.div`
     color: ${({ theme }) => theme.colors.onSurfaceHighlighted};
 `;
 
-export const ListItemDescription = styled.p`
-    color: ${({ theme }) => theme.colors.onSurface};
-    font-size: ${({ theme }) => theme.font.size.md};
-    line-height: 1.4;
-    text-align: justify;
-`;
-
 export const ListItemCta = styled.div`
     display: flex;
     justify-content: flex-end;
+    margin-top: ${({ theme }) => theme.box.spacing.md};
 `;

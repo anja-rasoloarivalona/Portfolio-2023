@@ -1,17 +1,18 @@
 import React from 'react';
-import { Container, Text } from './NaiaAbout-styles';
-import { Title } from '../../../../../components';
+import { Paragraph, Section, Title } from '../../../../../components';
+import { useTranslation } from 'react-i18next';
+import { formatText } from '../../../../../tools';
 
 const NaiaAbout = () => {
+    const { t } = useTranslation();
+
     return (
-        <Container>
-            <Title isCentered={false}>About NAIA</Title>
-            <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatem deserunt inventore
-                impedit qui dicta nisi dolor vero voluptates praesentium, sapiente vel optio id aperiam
-                dolores tempore atque earum distinctio?
-            </Text>
-        </Container>
+        <Section>
+            <Title isCentered={false}>{t('projects.naia.page.about.title')}</Title>
+            <Paragraph>{formatText(t('projects.naia.page.about.text_1'))}</Paragraph>
+            <Paragraph>{formatText(t('projects.naia.page.about.text_2'))}</Paragraph>
+            <Paragraph>{formatText(t('projects.naia.page.about.text_3'))}</Paragraph>
+        </Section>
     );
 };
 

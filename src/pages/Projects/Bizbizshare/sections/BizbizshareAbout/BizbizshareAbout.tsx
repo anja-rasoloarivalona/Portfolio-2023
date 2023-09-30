@@ -1,20 +1,18 @@
 import React from 'react';
-import { Container, Text, TextContainer } from './BizbizshareAbout-styles';
-import { Title } from '../../../../../components';
+import { Paragraph, Section, Title } from '../../../../../components';
 import { useTranslation } from 'react-i18next';
+import { formatText } from '../../../../../tools';
 
 const BizbizshareAbout = () => {
     const { t } = useTranslation();
 
     return (
-        <Container>
+        <Section>
             <Title isCentered={false}>{t('projects.bizbizshare.page.about.title')}</Title>
-            <TextContainer>
-                <Text>{t('projects.bizbizshare.page.about.text_1')}</Text>
-                <Text>{t('projects.bizbizshare.page.about.text_2')}</Text>
-                <Text>{t('projects.bizbizshare.page.about.text_3')}</Text>
-            </TextContainer>
-        </Container>
+            <Paragraph>{formatText(t('projects.bizbizshare.page.about.text_1'))}</Paragraph>
+            <Paragraph>{formatText(t('projects.bizbizshare.page.about.text_2'))}</Paragraph>
+            <Paragraph>{formatText(t('projects.bizbizshare.page.about.text_3'))}</Paragraph>
+        </Section>
     );
 };
 

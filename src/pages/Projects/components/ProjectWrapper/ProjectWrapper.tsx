@@ -10,9 +10,10 @@ import {
     HeaderTitleContainer,
     HeaderTitle,
 } from './ProjectWrapper-styles';
-import { OutlinedButton } from '../../../../components';
+import { Animated, OutlinedButton } from '../../../../components';
 import { Project } from '../../../../types';
 import { useTranslation } from 'react-i18next';
+import { useViewedPath } from '../../../../hooks';
 
 type ProjectWrapperProps = {
     children: React.ReactNode;
@@ -21,6 +22,8 @@ type ProjectWrapperProps = {
 
 const ProjectWrapper = ({ children, project }: ProjectWrapperProps) => {
     const { t } = useTranslation();
+
+    const isViewed = useViewedPath();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -32,7 +35,9 @@ const ProjectWrapper = ({ children, project }: ProjectWrapperProps) => {
                 <Header>
                     <HeaderImage src={project.imageHero} />
                     <HeaderTitleContainer>
-                        <HeaderTitle>{project.companyName}</HeaderTitle>
+                        <Animated isTriggered isDisabled={isViewed}>
+                            <HeaderTitle>{project.companyName}</HeaderTitle>
+                        </Animated>
                     </HeaderTitleContainer>
                     <HeaderCta>
                         <OutlinedButton externalPath={project.websiteUrl}>

@@ -1,13 +1,12 @@
 export const SKILLS_LIST = [
     {
-        title: 'Front-end',
-        description:
-            'I love Front-end development. I get a lot of satisfaction when I see a product coming to life on my screen.',
+        id: 'frontend',
         list: [
             'ES6 - Javascript',
             'Typescript',
             'React - Redux',
             'React Native',
+            'Styled-components',
             'Vue.js',
             'Angular',
             'jQuery',
@@ -15,15 +14,31 @@ export const SKILLS_LIST = [
         ],
     },
     {
-        title: 'Back-end',
-        description:
-            'I love Front-end development. I get a lot of satisfaction when I see a product coming to life on my screen.',
-        list: ['Node.js', 'Express', 'MySQL', 'MongoDB', 'graphQL', 'Elastic search', 'Jest', 'Mocha'],
+        id: 'backend',
+        list: [
+            'Node.js',
+            'Express',
+            'MySQL',
+            'MongoDB',
+            'GraphQL',
+            'Elastic search',
+            'Jest',
+            'Mocha',
+            'Postman',
+        ],
     },
     {
-        title: 'Tools',
-        description:
-            'I love Front-end development. I get a lot of satisfaction when I see a product coming to life on my screen.',
-        list: ['Heroku', 'Git', 'Github', 'Gitlab', 'BitBucket', 'Jira', 'Confluence', 'chatGPT'],
+        id: 'tools',
+        list: [
+            'Heroku',
+            'Github',
+            'Gitlab',
+            'BitBucket',
+            'Agile / Scrum',
+            'Jira / Confluence',
+            'CI/CD',
+            'Docker',
+            'SourceTree',
+        ],
     },
 ];

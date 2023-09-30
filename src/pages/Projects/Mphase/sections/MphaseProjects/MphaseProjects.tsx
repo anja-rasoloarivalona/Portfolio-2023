@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, List, ListItem, ListItemText, ListItemTitle } from './MphaseProjects-styles';
-import { Title } from '../../../../../components';
+import { List, ListItem, ListItemTitle } from './MphaseProjects-styles';
+import { Paragraph, Section, Title } from '../../../../../components';
 import { useTranslation } from 'react-i18next';
 import { ResourceKey } from 'i18next';
 
@@ -22,19 +22,19 @@ const projects = [
 const MphaseProjects = () => {
     const { t } = useTranslation();
     return (
-        <Container>
+        <Section>
             <Title>{t('projects.mphase.page.projects.title')}</Title>
             <List>
                 {projects.map((project, index) => (
                     <ListItem key={index}>
                         <ListItemTitle>{project.name}</ListItemTitle>
-                        <ListItemText>
+                        <Paragraph displayType="onSurface">
                             {t(`projects.mphase.page.projects.${project.id}.text` as ResourceKey)}
-                        </ListItemText>
+                        </Paragraph>
                     </ListItem>
                 ))}
             </List>
-        </Container>
+        </Section>
     );
 };
 

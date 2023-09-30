@@ -1,5 +1,6 @@
 export const box = {
     spacing: {
+        xxxl: '10rem',
         xxl: '5rem',
         xl: '3rem',
         lg: '2rem',

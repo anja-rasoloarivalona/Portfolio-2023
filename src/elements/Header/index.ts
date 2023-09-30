@@ -1,1 +1,2 @@
-export { default } from './Header';
+export { DarkHeader } from './customs';
+export { LightHeader } from './customs';

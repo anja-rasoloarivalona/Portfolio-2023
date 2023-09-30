@@ -100,6 +100,7 @@ export const Content = styled.div`
     grid-column: 1 / -1;
     padding-top: ${({ theme }) => theme.box.spacing.xxl};
     ${({ theme }) => theme.config.grid.default};
+    margin-bottom: ${({ theme }) => theme.box.spacing.xxxl};
 
     > * {
         grid-column: 3 / 4;
