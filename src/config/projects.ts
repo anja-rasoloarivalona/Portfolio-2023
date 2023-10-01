@@ -54,7 +54,6 @@ export const projects: Map<ProjectId, Project> = new Map([
             image: naiaImage,
             imageHero: naiaImageHero,
             websiteUrl: 'https://staging-naia-web-91d64945f832.herokuapp.com',
-            // websiteUrl: 'http://localhost:3002',
         },
     ],
 ]);

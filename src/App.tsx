@@ -21,8 +21,6 @@ const App = () => {
     const [viewedPathnames, setViewedPathnames] = useState<Array<string>>([]);
 
     useEffect(() => {
-        console.log({ process: process.env });
-
         // reset hash
         window.location.hash = '';
         window.scrollTo(0, 0);

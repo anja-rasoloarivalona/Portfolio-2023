@@ -4,6 +4,5 @@ declare namespace NodeJS {
         REACT_APP_EMAILJS_SERVICE_ID: string;
         REACT_APP_EMAILJS_TEMPLATE_ID: string;
         REACT_APP_SECRET: string;
-        REACT_APP_NAIA_PASS: string;
     }
 }

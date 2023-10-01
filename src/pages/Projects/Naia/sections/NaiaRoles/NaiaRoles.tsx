@@ -3,7 +3,6 @@ import { List, ListItem, ListItemCta, ListItemHeader, ListItemHeaderRole } from 
 import { OutlinedButton, Paragraph, Section, Title } from '../../../../../components';
 import { useTranslation } from 'react-i18next';
 import { ResourceKey } from 'i18next';
-import CryptoJS from 'crypto-js';
 import { projects } from '../../../../../config/projects';
 import { ProjectId } from '../../../../../types';
 
@@ -42,12 +41,14 @@ const NaiaRoles = () => {
     const { t } = useTranslation();
 
     const getAuthString = (role: string): string => {
-        const auth = CryptoJS.AES.encrypt(
-            `${role}@mail.com ${process.env.REACT_APP_NAIA_PASS}`,
-            process.env.REACT_APP_SECRET
-        ).toString();
-
-        return encodeURIComponent(auth);
+        return encodeURIComponent(
+            window.btoa(
+                JSON.stringify({
+                    role: role,
+                    secret: process.env.REACT_APP_SECRET,
+                })
+            )
+        );
     };
 
     const project = projects.get(ProjectId.NAIA)!;
