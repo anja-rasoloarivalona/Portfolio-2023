@@ -41,7 +41,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           echo 'www.anjarasoloarivalona.com' > build/CNAME
-          git add build
+          git add -f build
           git commit -m "Deploy to GitHub Pages"
           git push origin main
         env:
