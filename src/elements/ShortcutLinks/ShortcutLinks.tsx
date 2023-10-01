@@ -18,35 +18,14 @@ import { useWindowSize } from 'usehooks-ts';
 import { useLocation } from 'react-router-dom';
 
 // icons
-import { IoLogoBitbucket } from 'react-icons/io';
-import { BsGithub, BsChevronRight } from 'react-icons/bs';
-import { HiDocumentText } from 'react-icons/hi';
-import { FaLinkedinIn } from 'react-icons/fa';
+import { BsChevronRight } from 'react-icons/bs';
+import { config } from '../../config/main';
 
 const ShortcutLinks = () => {
     const scrollPosition = useScrollPosition();
     const windowSize = useWindowSize();
     const { pathname } = useLocation();
     const { openedMenu } = useContext(AppContext);
-
-    const list = [
-        {
-            label: 'Bitbucket',
-            Icon: IoLogoBitbucket,
-        },
-        {
-            label: 'Github',
-            Icon: BsGithub,
-        },
-        {
-            label: 'LinkedIn',
-            Icon: FaLinkedinIn,
-        },
-        {
-            label: 'Download CV',
-            Icon: HiDocumentText,
-        },
-    ];
 
     return (
         <Container
@@ -55,8 +34,8 @@ const ShortcutLinks = () => {
         >
             <Content>
                 <ContentList>
-                    {list.map(({ Icon, label }, index) => (
-                        <ContentListItem key={index}>
+                    {config.shortcutLinks.map(({ Icon, label, path }, index) => (
+                        <ContentListItem key={index} href={path} target="_blank" rel="noopener norefereer">
                             <ContentListItemIcon>
                                 <Icon />
                             </ContentListItemIcon>

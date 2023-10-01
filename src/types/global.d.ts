@@ -3,6 +3,11 @@ declare module '*.png' {
     export default value;
 }
 
+declare module '*.pdf' {
+    const value: string; // or whatever type is appropriate for your use case
+    export default value;
+}
+
 declare module '*.mp4' {
     const src: string;
     export default src;

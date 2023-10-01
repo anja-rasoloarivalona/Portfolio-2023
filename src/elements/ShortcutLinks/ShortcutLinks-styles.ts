@@ -21,6 +21,10 @@ export const Container = styled.div<{ isDisplayed: boolean; hasOpenedMenu: boole
     ${({ theme }) => theme.breakpoints.tablet} {
         scale: ${({ hasOpenedMenu }) => (hasOpenedMenu ? 1 : 0)};
     }
+
+    @media (max-height: 973px) and (max-width: 500px) {
+        display: none;
+    }
 `;
 
 export const Content = styled.div`
@@ -37,7 +41,7 @@ export const ContentList = styled.div`
     padding-bottom: ${({ theme }) => theme.box.spacing.sm};
 `;
 
-export const ContentListItem = styled.div`
+export const ContentListItem = styled.a`
     margin: ${({ theme }) => theme.box.spacing.sm};
     cursor: pointer;
     position: relative;

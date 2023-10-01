@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div<{ isDisplayed: boolean; hasOpenedMenu: boolean }>`
     position: fixed;
-    bottom: 0;
+    bottom: 0rem;
     right: 3rem;
     z-index: 10;
     transition: all 0.3s ease;
@@ -20,6 +20,10 @@ export const Container = styled.div<{ isDisplayed: boolean; hasOpenedMenu: boole
 
     ${({ theme }) => theme.breakpoints.tablet} {
         scale: ${({ hasOpenedMenu }) => (hasOpenedMenu ? 1 : 0)};
+    }
+
+    @media (max-height: 973px) and (max-width: 500px) {
+        display: none;
     }
 `;
 

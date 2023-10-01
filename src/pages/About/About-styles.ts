@@ -10,6 +10,14 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
     grid-column: 3 / 4;
     padding-top: ${({ theme }) => theme.box.spacing.md};
+
+    ${({ theme }) => theme.breakpoints.tablet} {
+        padding-top: ${({ theme }) => theme.box.spacing.xxxl};
+    }
+
+    @media (max-width: 670px) {
+        padding-top: ${({ theme }) => theme.box.spacing.xl};
+    }
 `;
 
 export const ImageContainer = styled.div`
@@ -34,6 +42,10 @@ export const ImageContainer = styled.div`
         height: 100%;
         background-color: ${({ theme }) => theme.colors.primary.layer};
     }
+
+    @media (max-width: 670px) {
+        display: none;
+    }
 `;
 
 export const Image = styled.img`
@@ -47,6 +59,10 @@ export const Content = styled.div`
 
     p {
         margin-bottom: ${({ theme }) => theme.box.spacing.md};
+    }
+
+    ${({ theme }) => theme.breakpoints.tablet} {
+        padding-left: 0;
     }
 `;
 

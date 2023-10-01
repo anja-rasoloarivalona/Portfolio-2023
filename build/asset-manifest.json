@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.61cc7cb9.css",
-    "main.js": "/static/js/main.b40003d4.js",
+    "main.js": "/static/js/main.26427932.js",
     "static/js/626.0f1b8324.chunk.js": "/static/js/626.0f1b8324.chunk.js",
-    "static/js/596.62d621ca.chunk.js": "/static/js/596.62d621ca.chunk.js",
+    "static/js/596.f406d673.chunk.js": "/static/js/596.f406d673.chunk.js",
     "static/js/688.ef398ce7.chunk.js": "/static/js/688.ef398ce7.chunk.js",
     "static/js/673.1cc67e8c.chunk.js": "/static/js/673.1cc67e8c.chunk.js",
     "static/js/33.54032244.chunk.js": "/static/js/33.54032244.chunk.js",
@@ -20,6 +20,7 @@
     "static/media/bizbizshare1.png": "/static/media/bizbizshare1.cf07946644b6394a407e.png",
     "static/media/bizbizshare-hero.png": "/static/media/bizbizshare-hero.63ca96a748bb3966f488.png",
     "static/media/espaces1.png": "/static/media/espaces1.01b601def66f34ebf820.png",
+    "static/media/Anja Rasoloarivalona - CV.pdf": "/static/media/Anja Rasoloarivalona - CV.595e50d31d16fbbda4b2.pdf",
     "static/media/naia-hero.png": "/static/media/naia-hero.8e375c23b7a3dfe7c6bb.png",
     "static/media/naia.png": "/static/media/naia.5730aa30d0bbab29fa2e.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -29,11 +30,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.61cc7cb9.css.map": "/static/css/main.61cc7cb9.css.map",
-    "main.b40003d4.js.map": "/static/js/main.b40003d4.js.map",
-    "596.62d621ca.chunk.js.map": "/static/js/596.62d621ca.chunk.js.map"
+    "main.26427932.js.map": "/static/js/main.26427932.js.map",
+    "596.f406d673.chunk.js.map": "/static/js/596.f406d673.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61cc7cb9.css",
-    "static/js/main.b40003d4.js"
+    "static/js/main.26427932.js"
   ]
 }

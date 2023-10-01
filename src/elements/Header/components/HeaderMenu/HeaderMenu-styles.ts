@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding-top: 10%;
+    /* padding-top: 10%;
 
     ${({ theme }) => theme.breakpoints.tablet} {
         padding-top: 30%;
-    }
+    } */
 `;
 
 export const List = styled.ul``;

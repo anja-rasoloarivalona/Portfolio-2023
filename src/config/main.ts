@@ -1,5 +1,6 @@
 import { Locale } from '../types';
 import { projects } from './projects';
+import { shortcutLinks } from './shortcut-links';
 
 export const config = {
     locales: {
@@ -12,4 +13,5 @@ export const config = {
         templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
     },
     projects: projects,
+    shortcutLinks: shortcutLinks,
 };

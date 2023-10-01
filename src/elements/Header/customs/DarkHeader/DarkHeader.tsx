@@ -19,7 +19,7 @@ import {
 } from './DarkHeader-styles';
 import { Logo } from '../../../../components';
 import { AppContext } from '../../../../App';
-import { HeaderForm, HeaderMenu, HeaderMenuIcon } from '../../components';
+import { HeaderForm, HeaderMenu, HeaderMenuIcon, HeaderMobileMenuFooter } from '../../components';
 import { MenuList } from '../../../../types';
 
 const DarkHeader = () => {
@@ -69,25 +69,23 @@ const DarkHeader = () => {
 
     useEffect(() => {
         // Function to disable body scroll
-        const disableScroll = (e: Event) => {
-            e.preventDefault();
-        };
-
-        if (openedMenu != null) {
-            // Add event listeners when menu is toggled
-            document.body.addEventListener('touchmove', disableScroll, { passive: false });
-            document.body.addEventListener('wheel', disableScroll, { passive: false });
-        } else {
-            // Remove event listeners when menu is not toggled
-            document.body.removeEventListener('touchmove', disableScroll);
-            document.body.removeEventListener('wheel', disableScroll);
-        }
-
-        // Clean up by removing event listeners when the component unmounts
-        return () => {
-            document.body.removeEventListener('touchmove', disableScroll);
-            document.body.removeEventListener('wheel', disableScroll);
-        };
+        // const disableScroll = (e: Event) => {
+        //     e.preventDefault();
+        // };
+        // if (openedMenu != null) {
+        //     // Add event listeners when menu is toggled
+        //     document.body.addEventListener('touchmove', disableScroll, { passive: false });
+        //     document.body.addEventListener('wheel', disableScroll, { passive: false });
+        // } else {
+        //     // Remove event listeners when menu is not toggled
+        //     document.body.removeEventListener('touchmove', disableScroll);
+        //     document.body.removeEventListener('wheel', disableScroll);
+        // }
+        // // Clean up by removing event listeners when the component unmounts
+        // return () => {
+        //     document.body.removeEventListener('touchmove', disableScroll);
+        //     document.body.removeEventListener('wheel', disableScroll);
+        // };
     }, [openedMenu]);
 
     return (
@@ -119,6 +117,7 @@ const DarkHeader = () => {
             <MenuContainer isDisplayed={openedMenu != null}>
                 {openedMenu === MenuList.DEFAULT && <HeaderMenu />}
                 {openedMenu === MenuList.FORM && <HeaderForm />}
+                <HeaderMobileMenuFooter />
             </MenuContainer>
         </Container>
     );

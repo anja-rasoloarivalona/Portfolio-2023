@@ -109,4 +109,7 @@ export const MenuContainer = styled.div<{ isDisplayed: boolean }>`
     display: flex;
     justify-content: center;
     opacity: ${({ isDisplayed }) => (isDisplayed ? 1 : 0)};
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
 `;
