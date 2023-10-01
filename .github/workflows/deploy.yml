@@ -43,7 +43,8 @@ jobs:
           echo 'www.anjarasoloarivalona.com' > build/CNAME
           git add -f build
           git commit -m "Deploy to GitHub Pages"
-          git push origin main
+          git checkout -b gh-pages  # Create or switch to the gh-pages branch
+          git push origin gh-pages  # Push changes to the gh-pages branch
         env:
           CI: true
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
